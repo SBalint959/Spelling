@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Voltrex_mid
   m_EditorClassIdentifier: 
   DamageAmount: 15
-  Lifetime: 2
-  Speed: 3
+  Lifetime: 5
+  Speed: 7
   SpellRadius: 0.7

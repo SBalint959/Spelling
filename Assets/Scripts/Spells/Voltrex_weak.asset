@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Voltrex_weak
   m_EditorClassIdentifier: 
   DamageAmount: 15
-  Lifetime: 2
-  Speed: 2
+  Lifetime: 5
+  Speed: 4
   SpellRadius: 0.4

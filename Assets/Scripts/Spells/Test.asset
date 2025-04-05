@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   DamageAmount: 1
-  Lifetime: 4
-  Speed: 1
+  Lifetime: 3
+  Speed: 10
   SpellRadius: 1

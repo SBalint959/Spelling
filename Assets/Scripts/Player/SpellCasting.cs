@@ -162,11 +162,16 @@ public class SpellCasting : MonoBehaviour
     }
 
     void InstantiateSpell(Spell spell, SpellVariant variant)
-    {
-        Spell newSpell = Instantiate(spell, castPoint.position, playerCamera.rotation);
-        // newSpell.SetVariant(variant);
-        Debug.Log($"Casted {variant} version of {spell.name}");
-    }
+{
+    // Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
+    Vector3 spawnPosition = castPoint.position;
+    Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+
+    Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
+    // newSpell.SetVariant(variant); // Uncomment if needed
+    Debug.Log($"Casted {variant} version of {spell.name}");
+}
+
 
     // Levenshtein Distance Algorithm (Fuzzy Matching)
     int LevenshteinDistance(string a, string b)
