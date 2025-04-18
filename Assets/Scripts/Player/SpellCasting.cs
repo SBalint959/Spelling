@@ -7,6 +7,8 @@ public class SpellCasting : MonoBehaviour
     [SerializeField] private Spell[] alternativeSpells; // Weak and strong versions of spells
     [SerializeField] private Transform castPoint;
     [SerializeField] private Transform playerCamera;
+    [SerializeField] private SpellNameGenerator spellNameGenerator;
+
 
     private PlayerMovement playerMovement;
     private string currentInput = ""; // Stores player's input for spell name
@@ -14,10 +16,13 @@ public class SpellCasting : MonoBehaviour
 
     
 
+
     private float typingStartTime; // When typing starts
 
     void Awake()
     {
+        string fireBall = spellNameGenerator.GetSpellName(SpellElement.Fire, SpellAction.Veil);
+        Debug.Log($"Discovered spell: {fireBall}");
         playerMovement = GetComponent<PlayerMovement>();
         if (playerMovement == null)
         {
