@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spell : MonoBehaviour
 {
     public SpellScriptableObject SpellToCast;
+    public GameObject hitParticleEffectPrefab;
 
     private SphereCollider myCollider;
     private Rigidbody myRigidBody;
@@ -17,15 +18,35 @@ public class Spell : MonoBehaviour
 
         myRigidBody = GetComponent<Rigidbody>();
         myRigidBody.isKinematic = true;
+
         Destroy(this.gameObject, SpellToCast.Lifetime);
     }
 
-    private void Update() {
-        if (SpellToCast.Speed > 0) transform.Translate(Vector3.forward * SpellToCast.Speed * Time.deltaTime);
+    private void Update()
+    {
+        if (SpellToCast.Speed > 0)
+            transform.Translate(Vector3.forward * SpellToCast.Speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        // Check if we hit an enemy
+        EnemyAi enemy = other.GetComponent<EnemyAi>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage((int)SpellToCast.DamageAmount);
+
+            if (hitParticleEffectPrefab != null)
+            {
+                Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
+            }
+
+            Destroy(this.gameObject);
+        }
+        else
+        {
+
+            Destroy(this.gameObject);
+        }
     }
 }

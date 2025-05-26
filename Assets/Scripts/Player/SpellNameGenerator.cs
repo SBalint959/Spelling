@@ -16,6 +16,7 @@ public class SpellNameGenerator : MonoBehaviour
     private string[] commonConsonants = { "r", "t", "s", "n", "l", "d", "c", "m", "k" };
     private string[] hardConsonants = { "z", "x", "q", "v", "g", "p" };
     private string[] trickyCombos = { "th", "ph", "kr", "gr", "tr", "sh" };
+    private string[] croatianConsonants = {"č", "ć", "dž", "đ", "š", "ž"};
 
     private void Awake()
     {

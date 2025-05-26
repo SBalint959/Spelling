@@ -142,7 +142,7 @@ public class EnemyAi : MonoBehaviour
         alreadyAttacked = false;
     }
 
-    private void TakeDamage(int damage) {
+    public void TakeDamage(int damage) {
         health -= damage;
         if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
 

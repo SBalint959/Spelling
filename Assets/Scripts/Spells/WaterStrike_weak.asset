@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d655d4bdeb46ba4a8790be9c9ae1110, type: 3}
-  m_Name: Voltrex
+  m_Name: WaterStrike_weak
   m_EditorClassIdentifier: 
-  DamageAmount: 15
-  Lifetime: 5
-  Speed: 10
+  DamageAmount: 8
+  Lifetime: 50
+  Speed: 3
   SpellRadius: 1

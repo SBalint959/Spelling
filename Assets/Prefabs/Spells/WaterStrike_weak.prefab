@@ -4955,7 +4955,7 @@ GameObject:
   - component: {fileID: 6605389958794180736}
   - component: {fileID: 1999853751896096489}
   m_Layer: 0
-  m_Name: aquenveytron_weak
+  m_Name: WaterStrike_weak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5038,3 +5038,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpellToCast: {fileID: 11400000, guid: 7a2d593426171b24fabbeedb7b50d1c5, type: 2}
+  hitParticleEffectPrefab: {fileID: 8062326719160847709, guid: 0772fad2c63f0ab46adcb66236c856d8, type: 3}

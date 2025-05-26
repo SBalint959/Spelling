@@ -12,7 +12,17 @@ public class PlayerHealth : MonoBehaviour
         HealthScroll.size = Health/100;
 
         if (Health <= 0){
-            Application.Quit();
+
+            Debug.Log("Quit Game");
+
+            // If running in the editor
+            #if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                    // If running in a build
+                    Application.Quit();
+            #endif
         }
+
     }
 }

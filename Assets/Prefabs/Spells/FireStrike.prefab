@@ -4955,7 +4955,7 @@ GameObject:
   - component: {fileID: 6605389958794180736}
   - component: {fileID: 1999853751896096489}
   m_Layer: 0
-  m_Name: voltrex_mid
+  m_Name: FireStrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4996,7 +4996,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.4
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6605389958794180736
 Rigidbody:
@@ -5037,4 +5037,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e53eb083a200c4eb0d11ea96c12d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellToCast: {fileID: 11400000, guid: 845d901e5fd605c49bd76f6d662e6b7f, type: 2}
+  SpellToCast: {fileID: 11400000, guid: ae294eb8dbbcc524ca7956f11b9c06e5, type: 2}
+  hitParticleEffectPrefab: {fileID: 8062326719160847709, guid: 0772fad2c63f0ab46adcb66236c856d8, type: 3}
