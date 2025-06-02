@@ -9,6 +9,8 @@ public class SpellCasting : MonoBehaviour
     [SerializeField] private Transform castPoint;
     [SerializeField] private Transform playerCamera;
     [SerializeField] private SpellNameGenerator spellNameGenerator;
+    [SerializeField] private GameObject playerGameObject;
+
 
     private PlayerMovement playerMovement;
     private string currentInput = "";
@@ -150,10 +152,13 @@ public class SpellCasting : MonoBehaviour
 
     void InstantiateSpell(Spell spell, SpellVariant variant)
     {
-        // Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
-        Vector3 spawnOffset = playerCamera.forward * 1.2f;
+        Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
+        // Vector3 spawnOffset = playerCamera.forward * 1.2f;
         Vector3 spawnPosition = castPoint.position + spawnOffset;
         // Vector3 spawnPosition = castPoint.position;
+        spawnPosition.y = playerGameObject.transform.position.y;
+        Debug.Log($"Player position: {playerGameObject.transform.position.y}");
+        Debug.Log($"SpawnPos: {spawnPosition}");
         Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
 
         Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);

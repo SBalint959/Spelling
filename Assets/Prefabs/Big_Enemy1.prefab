@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4504072447467720257}
   - component: {fileID: 2047923338052865322}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Big_Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.3250652, z: -0, w: 0.94569165}
   m_LocalPosition: {x: -36.386, y: 58.595, z: 48.703}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 2.77275, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf1a483706e6e9649bc0caa27bdfb0d1, type: 2}
+  - {fileID: 2100000, guid: 277b0135da9ae1e4da6a98142b583409, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -154,12 +154,12 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 128
-  health: 10
-  pointsValue: 5
+  health: 20
+  pointsValue: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 10
   timeBetweenAttacks: 3
-  projectile: {fileID: 9125291892453276259, guid: 0c591877a25b661438bbc4679bfd291b, type: 3}
+  projectile: {fileID: 9125291892453276259, guid: 9b803b342a6706746a45fa674f1dc28c, type: 3}
   sightRange: 20
   attackRange: 12
   playerInSightRange: 1

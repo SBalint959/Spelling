@@ -9,6 +9,9 @@ public class EnemyAi : MonoBehaviour
     public LayerMask whatIsGround, whatIsPlayer;
     public float health;
 
+    //How much points worth
+    public int pointsValue = 5; 
+
     //Patrolling
     public Vector3 walkPoint;
     bool walkPointSet;
@@ -30,6 +33,7 @@ public class EnemyAi : MonoBehaviour
     private float maxStuckTime = 5f;
     private float stuckTimer = 0f;
     private float timeSinceLastCheck = 0f;
+
     private void Awake()
     {
         player = GameObject.Find("Player").transform;
@@ -48,7 +52,7 @@ public class EnemyAi : MonoBehaviour
     }
 
     private void Patrolling()
-{
+    {
     // Debug.Log("Patrolling");
     // Debug.Log("Agent position: " + transform.position);
     // Debug.Log("Walkpoint position: " + walkPoint);
@@ -119,14 +123,20 @@ public class EnemyAi : MonoBehaviour
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        // transform.LookAt(player);
+        Vector3 flatDirection = player.position - transform.position;
+        flatDirection.y = 0f; // Ignore vertical difference
+        flatDirection.Normalize();
+        transform.rotation = Quaternion.LookRotation(flatDirection);
 
         Vector3 directionToPlayer = (player.position - transform.position).normalized;
         Quaternion spawnRotation = Quaternion.LookRotation(directionToPlayer);
         Vector3 spawnPosition = transform.position + directionToPlayer * 1.2f + Vector3.up * 0.5f;
+        
 
 
-        if (!alreadyAttacked) {
+        if (!alreadyAttacked)
+        {
             //Attack code
             // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             Rigidbody rb = Instantiate(projectile, spawnPosition, spawnRotation).GetComponent<Rigidbody>();
@@ -144,8 +154,18 @@ public class EnemyAi : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy), .5f);
-
+        if (health <= 0)
+        {
+            if (ScoreManager.Instance != null)
+            {
+                ScoreManager.Instance.AddPoints(pointsValue);
+            }
+            else
+            {
+                Debug.Log("ScoreManager not found");
+            }
+            Invoke(nameof(DestroyEnemy), 0.5f);
+        }
     }
 
     private void DestroyEnemy() {

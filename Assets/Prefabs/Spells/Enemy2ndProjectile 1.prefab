@@ -4780,7 +4780,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3acb16f625d65944b97f99c0458c05ca, type: 2}
+  - {fileID: 2100000, guid: 277b0135da9ae1e4da6a98142b583409, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4846,7 +4846,7 @@ GameObject:
   - component: {fileID: 6736304760952149303}
   - component: {fileID: 7885369824418159436}
   m_Layer: 0
-  m_Name: Waterball_graphics
+  m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4862,7 +4862,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4934685225716775145}
@@ -4899,7 +4899,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3acb16f625d65944b97f99c0458c05ca, type: 2}
+  - {fileID: 2100000, guid: 277b0135da9ae1e4da6a98142b583409, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4953,9 +4953,9 @@ GameObject:
   - component: {fileID: 1993198157200535481}
   - component: {fileID: 4342312580397315392}
   - component: {fileID: 6605389958794180736}
-  - component: {fileID: 1999853751896096489}
+  - component: {fileID: 3050611118463147212}
   m_Layer: 0
-  m_Name: FireStrike_weak
+  m_Name: Enemy2ndProjectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4971,7 +4971,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8485, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3765451431968041655}
@@ -4996,7 +4996,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.2
+  m_Radius: 0.6
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6605389958794180736
 Rigidbody:
@@ -5006,7 +5006,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9125291892453276259}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 2
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -5022,10 +5022,10 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1999853751896096489
+--- !u!114 &3050611118463147212
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5034,8 +5034,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9125291892453276259}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82e53eb083a200c4eb0d11ea96c12d38, type: 3}
+  m_Script: {fileID: 11500000, guid: da6ca048e78c7d149bc3d2685ed609e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellToCast: {fileID: 11400000, guid: 610a60331d9878f4c929fae08c7dde31, type: 2}
-  hitParticleEffectPrefab: {fileID: 8062326719160847709, guid: 0772fad2c63f0ab46adcb66236c856d8, type: 3}
+  particleEffectPrefab: {fileID: 8062326719160847709, guid: 0772fad2c63f0ab46adcb66236c856d8, type: 3}
+  collisionDelay: 0.1
+  damage: 10

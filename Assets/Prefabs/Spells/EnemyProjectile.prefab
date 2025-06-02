@@ -4780,7 +4780,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3acb16f625d65944b97f99c0458c05ca, type: 2}
+  - {fileID: 2100000, guid: f8a2e9f4da51ab746b832852e6e1e9c9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4899,7 +4899,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 277b0135da9ae1e4da6a98142b583409, type: 2}
+  - {fileID: 2100000, guid: 1cce7a9c9e856734da562289fbc82e36, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5039,3 +5039,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleEffectPrefab: {fileID: 8062326719160847709, guid: 0772fad2c63f0ab46adcb66236c856d8, type: 3}
   collisionDelay: 0.1
+  damage: 10
