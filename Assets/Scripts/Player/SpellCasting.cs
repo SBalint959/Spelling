@@ -154,8 +154,8 @@ public class SpellCasting : MonoBehaviour
     {
         Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
         // Vector3 spawnOffset = playerCamera.forward * 1.2f;
-        Vector3 spawnPosition = castPoint.position + spawnOffset;
-        // Vector3 spawnPosition = castPoint.position;
+        // Vector3 spawnPosition = castPoint.position + spawnOffset;
+        Vector3 spawnPosition = castPoint.position;
         spawnPosition.y = playerGameObject.transform.position.y;
         Debug.Log($"Player position: {playerGameObject.transform.position.y}");
         Debug.Log($"SpawnPos: {spawnPosition}");

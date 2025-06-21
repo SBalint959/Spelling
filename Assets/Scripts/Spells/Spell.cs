@@ -30,6 +30,7 @@ public class Spell : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player")) return;
         // Check if we hit an enemy
         EnemyAi enemy = other.GetComponent<EnemyAi>();
         if (enemy != null)

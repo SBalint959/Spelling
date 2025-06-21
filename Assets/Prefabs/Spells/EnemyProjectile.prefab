@@ -5039,4 +5039,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleEffectPrefab: {fileID: 8062326719160847709, guid: 0772fad2c63f0ab46adcb66236c856d8, type: 3}
   collisionDelay: 0.1
-  damage: 10
+  damage: 5

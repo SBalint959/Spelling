@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
         GameOverCanvas.SetActive(true);
         HpBarCanvas.SetActive(false);
         PointsCanvas.SetActive(false);
-
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
