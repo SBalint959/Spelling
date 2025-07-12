@@ -8,12 +8,12 @@ public class QuitGameButton : MonoBehaviour
         Debug.Log("Quit Game");
 
         // If running in the editor
-#if UNITY_EDITOR
+        #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-#else
+        #else
         // If running in a build
         Application.Quit();
-#endif
+        #endif
     }
 }
 

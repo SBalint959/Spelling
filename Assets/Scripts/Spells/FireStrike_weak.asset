@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageAmount: 15
   Lifetime: 5
-  Speed: 10
+  Speed: 20
   SpellRadius: 0.4

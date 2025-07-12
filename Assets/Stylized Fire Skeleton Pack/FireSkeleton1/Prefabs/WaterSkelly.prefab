@@ -219,7 +219,7 @@ PrefabInstance:
     - target: {fileID: -1544407930333200207, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 74552ee31dbfb9b4ba2483d430971054, type: 2}
+      objectReference: {fileID: 2100000, guid: d312b3cf7f010664ba170054de96f3a2, type: 2}
     - target: {fileID: -1525416584670290268, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -49.982986
@@ -342,7 +342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
       propertyPath: m_Name
-      value: PoisonSkelly 1
+      value: WaterSkelly
       objectReference: {fileID: 0}
     - target: {fileID: 1254399505943607367, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -496,7 +496,7 @@ PrefabInstance:
       addedObject: {fileID: 17168771739053853}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8593402815619769179}
+      addedObject: {fileID: -2794890225502273185}
   m_SourcePrefab: {fileID: 100100000, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
 --- !u!1 &5896608848519244016 stripped
 GameObject:
@@ -549,13 +549,13 @@ MonoBehaviour:
   pointsValue: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 30
-  timeBetweenAttacks: 5
+  timeBetweenAttacks: 1
   projectile: {fileID: 4423071090435520619, guid: f1123641e5d7bcd46ad2d5bed4e28aae, type: 3}
-  sightRange: 60
-  attackRange: 30
+  sightRange: 20
+  attackRange: 4
   playerInSightRange: 1
   playerInAttackRange: 1
---- !u!136 &-8593402815619769179
+--- !u!136 &-2794890225502273185
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

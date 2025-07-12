@@ -490,6 +490,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
       insertIndex: -1
       addedObject: {fileID: 918280401550465118}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -962185461321489505}
   m_SourcePrefab: {fileID: 100100000, guid: e8ec614cff579fe4ab4a8ae0896f0481, type: 3}
 --- !u!1 &8461323245348639825 stripped
 GameObject:
@@ -541,10 +544,33 @@ MonoBehaviour:
   health: 10
   pointsValue: 5
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 10
+  walkPointRange: 30
   timeBetweenAttacks: 3
   projectile: {fileID: 4423071090435520619, guid: f1123641e5d7bcd46ad2d5bed4e28aae, type: 3}
-  sightRange: 20
-  attackRange: 12
+  sightRange: 40
+  attackRange: 14
   playerInSightRange: 1
   playerInAttackRange: 1
+--- !u!136 &-962185461321489505
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8461323245348639825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum SpellElement { Fire, Water, Earth, Air, Lightning, Shadow }
-public enum SpellAction { Veil, Strike, Burst, Storm, Ultimate }
+public enum SpellAction { Strike, Veil,  Burst, Storm, Ultimate }
 
 public enum DifficultyProfile { Easy, Medium, Hard }
 
@@ -111,6 +111,18 @@ public class SpellNameGenerator : MonoBehaviour
         string actionWord = ActionWords[action];
         return $"{elementWord} {actionWord}";
     }
+
+    // public string GetElementName(SpellElement element)
+    // {
+    //     string elementWord = ElementWords[element];
+    //     return elementWord;
+    // }
+
+    // public string GetActionName(SpellAction action)
+    // {
+    //     string actionWord = ActionWords[action];
+    //     return actionWord;
+    // }
 
     public string GetElementWord(SpellElement element) => ElementWords[element];
     public string GetActionWord(SpellAction action) => ActionWords[action];

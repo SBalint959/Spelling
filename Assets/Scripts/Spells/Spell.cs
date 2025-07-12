@@ -31,23 +31,33 @@ public class Spell : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) return;
-        // Check if we hit an enemy
+
+        Debug.Log("Hit");
+
+        // Check for different enemy types
         EnemyAi enemy = other.GetComponent<EnemyAi>();
+        EnemyAiSniper sniper = other.GetComponent<EnemyAiSniper>();
+        EnemyAiHeavy heavy = other.GetComponent<EnemyAiHeavy>();
+
         if (enemy != null)
         {
             enemy.TakeDamage((int)SpellToCast.DamageAmount);
-
-            if (hitParticleEffectPrefab != null)
-            {
-                Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
-            }
-
-            Destroy(this.gameObject);
         }
-        else
+        else if (sniper != null)
         {
-
-            Destroy(this.gameObject);
+            sniper.TakeDamage((int)SpellToCast.DamageAmount);
         }
+        else if (heavy != null)
+        {
+            heavy.TakeDamage((int)SpellToCast.DamageAmount);
+        }
+
+        if (hitParticleEffectPrefab != null)
+        {
+            Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
+        }
+
+        Destroy(this.gameObject);
     }
+
 }
