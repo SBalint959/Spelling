@@ -19,6 +19,12 @@ public class SpellCasting : MonoBehaviour
 
     private Dictionary<string, string> generatedToRealNameMap = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
+    // typing stats variables
+    private int totalCharactersTyped = 0;
+    private int totalCharactersMistyped = 0;
+    private float totalTypingTime = 0f;
+    // private float typingStartTime;
+
     void Awake()
     {
         playerMovement = GetComponent<PlayerMovement>();
@@ -53,6 +59,10 @@ public class SpellCasting : MonoBehaviour
         typingStartTime = Time.time;
         playerMovement.isMovementDisabled = true;
     }
+    public bool IsPlayerTyping()
+    {
+        return isTyping;
+    }
 
     void HandleTyping()
     {
@@ -72,6 +82,7 @@ public class SpellCasting : MonoBehaviour
                     continue;
                 }
                 currentInput += c;
+                totalCharactersTyped++;
             }
         }
     }
@@ -82,20 +93,26 @@ public class SpellCasting : MonoBehaviour
         playerMovement.isMovementDisabled = false;
 
         float typingDuration = Time.time - typingStartTime;
+        totalTypingTime += typingDuration;
 
         string bestGeneratedName = null;
         int bestDistance = int.MaxValue;
 
-        // Compare input against generated names
+        // Normalize input to lowercase once
+        string lowerInput = currentInput.ToLower();
+
+        // Compare input against generated names (also lowercase)
         foreach (string generated in generatedToRealNameMap.Keys)
         {
-            int distance = LevenshteinDistance(currentInput, generated);
+            int distance = LevenshteinDistance(lowerInput, generated.ToLower());
             if (distance < bestDistance)
             {
                 bestDistance = distance;
                 bestGeneratedName = generated;
             }
         }
+
+        totalCharactersMistyped += bestDistance;
 
         if (bestGeneratedName == null)
         {
@@ -118,9 +135,13 @@ public class SpellCasting : MonoBehaviour
             Debug.Log($"No prefab found for spell variant: {realSpellName} ({variant})");
             return;
         }
+
         Debug.Log(currentInput);
+        Debug.Log(bestGeneratedName);
+        Debug.Log($"Best distance: '{bestDistance}'");
         InstantiateSpell(spellToCast, (SpellVariant)variant);
     }
+
 
     Spell GetSpellByVariant(string baseName, SpellVariant variant)
     {
@@ -143,6 +164,7 @@ public class SpellCasting : MonoBehaviour
     SpellVariant? DetermineSpellVariant(float timeTaken, int errorCount, int spellLength)
     {
         float errorRatio = (float)errorCount / spellLength;
+        Debug.Log(errorRatio);
 
         if (errorRatio > 0.5f) return null;
         if (errorRatio == 0 && timeTaken < 3f) return SpellVariant.Perfect;
@@ -152,20 +174,75 @@ public class SpellCasting : MonoBehaviour
 
     void InstantiateSpell(Spell spell, SpellVariant variant)
     {
+        string spellName = spell.name.ToLower();
+
+        if (spellName.Contains("strike"))
+        {
+            InstantiateBallSpell(spell, variant);
+        }
+        else if (spellName.Contains("burst"))
+        {
+            InstantiateBurstSpell(spell, variant);
+        }
+        else if (spellName.Contains("storm"))
+        {
+            InstantiateStormSpell(spell);
+        }
+        else
+        {
+            Debug.LogWarning($"No cast type matched for spell name: {spell.name}");
+        }
+    }
+
+
+    void InstantiateBallSpell(Spell spell, SpellVariant variant)
+    {
         Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
-        // Vector3 spawnOffset = playerCamera.forward * 1.2f;
-        // Vector3 spawnPosition = castPoint.position + spawnOffset;
         Vector3 spawnPosition = castPoint.position;
         spawnPosition.y = playerGameObject.transform.position.y;
-        Debug.Log($"Player position: {playerGameObject.transform.position.y}");
-        Debug.Log($"SpawnPos: {spawnPosition}");
+
         Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
 
         Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
-        // Debug.Log($"spawn pos:{spawnPosition}, spawn rot {spawnRotation}" );
-         Debug.Log($"[Spell Cast] castPoint position: {castPoint.position}, spawnPosition: {spawnPosition}");
+
+        // Debug.Log($"[Spell Cast] castPoint position: {castPoint.position}, spawnPosition: {spawnPosition}");
         Debug.Log($"Casted {variant} version of {spell.name}");
     }
+
+    void InstantiateBurstSpell(Spell spell, SpellVariant variant)
+    {
+        // SpellScriptableObject data = spell.SpellToCast;
+
+        Vector3 spawnPosition = playerGameObject.transform.position;
+        spawnPosition.y = playerGameObject.transform.position.y -1;
+        Quaternion spawnRotation = Quaternion.identity;
+        
+        Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
+
+        Debug.Log($"[Spell: Burst] Spawned {spell.name} at {spawnPosition}");
+    }
+
+    void InstantiateStormSpell(Spell spell)
+    {
+        float spawnDistance = 7f;
+
+        // Project forward and drop to ground height
+        Vector3 forwardOffset = playerCamera.forward * spawnDistance;
+        Vector3 spawnPosition = new Vector3(
+            playerGameObject.transform.position.x + forwardOffset.x,
+            0f, // Set to ground level (or raycast to get terrain height if needed)
+            playerGameObject.transform.position.z + forwardOffset.z
+        );
+
+        // adjust height
+        spawnPosition.y = playerGameObject.transform.position.y - 1;
+
+        Quaternion rotation = Quaternion.identity;
+        Instantiate(spell, spawnPosition, rotation);
+        Debug.Log($"[Spell: Storm] Spawned {spell.name} at {spawnPosition}");
+    }
+
+
 
     int LevenshteinDistance(string a, string b)
     {
@@ -214,6 +291,22 @@ public class SpellCasting : MonoBehaviour
         element = default;
         action = default;
         return false;
+    }
+
+
+    // function to fetch precision percentage
+    public float GetTypingPrecisionPercentage()
+    {
+        if (totalCharactersTyped == 0) return 0f;
+        float correct = totalCharactersTyped - totalCharactersMistyped;
+        return Mathf.Clamp01(correct / (float)totalCharactersTyped) * 100f;
+    }
+    
+    
+    public float GetAverageTypingSpeed()
+    {
+        if (totalTypingTime <= 0f) return 0f;
+        return totalCharactersTyped / totalTypingTime;
     }
 }
 

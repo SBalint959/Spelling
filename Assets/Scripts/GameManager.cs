@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameObject playerObject;
+
     // Full lists of all possible elements and actions
     public List<SpellElement> allElements = new List<SpellElement>();
     public List<SpellAction> allActions = new List<SpellAction>();
@@ -22,6 +24,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject PointsCanvas;
 
     private bool isPaused = false;
+    private bool isTyping;
+
+    private SpellCasting spellCastingScript;
 
     private void Awake()
     {
@@ -30,10 +35,15 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            spellCastingScript = playerObject.GetComponent<SpellCasting>();
 
             InitializeLists();
             DiscoverAction(SpellAction.Strike);
             DiscoverElement(SpellElement.Fire);
+
+            //DELETE LATER
+            DiscoverAction(SpellAction.Burst);
+            DiscoverAction(SpellAction.Storm);
         }
         else
         {
@@ -45,13 +55,18 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (isPaused)
+            isTyping = spellCastingScript.IsPlayerTyping();
+            if (!isTyping)
             {
-                UnPauseGame();
-            }
-            else
-            {
-                PauseGame();
+                if (isPaused)
+                {
+                    UnPauseGame();
+                }
+                else
+                {
+                    PauseGame();
+
+                }
             }
         }
     }

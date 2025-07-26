@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 94f20cc8a8220df43a1ecca4fc022b6c
+timeCreated: 1439064635
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: fx_textures_flare_materials.unity3d
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 313812
+  packageName: Game VFX - Six Elements VFX Mega Pack(HDRP)
+  packageVersion: 1.0
+  assetPath: Assets/Six Elements VFX Mega Pack/FX_Ice Skill/Materials/vfx_twinkle-blurred-add-[1.0]
+    1.mat
+  uploadId: 740178

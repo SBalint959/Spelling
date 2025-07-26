@@ -1,5 +1,6 @@
 using UnityEngine;
-using TMPro; // <- Required for TextMeshProUGUI
+using TMPro;
+using System; // <- Required for TextMeshProUGUI
 
 public class ScoreManager : MonoBehaviour
 {
@@ -33,5 +34,10 @@ public class ScoreManager : MonoBehaviour
 
         if (pointsText != null)
             pointsText.text = currentScore.ToString();
+    }
+
+    public string GetFinalScore()
+    {
+        return currentScore.ToString();
     }
 }
