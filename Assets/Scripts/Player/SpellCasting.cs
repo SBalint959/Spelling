@@ -164,7 +164,7 @@ public class SpellCasting : MonoBehaviour
     SpellVariant? DetermineSpellVariant(float timeTaken, int errorCount, int spellLength)
     {
         float errorRatio = (float)errorCount / spellLength;
-        Debug.Log(errorRatio);
+        // Debug.Log(errorRatio);
 
         if (errorRatio > 0.5f) return null;
         if (errorRatio == 0 && timeTaken < 3f) return SpellVariant.Perfect;
@@ -188,6 +188,10 @@ public class SpellCasting : MonoBehaviour
         {
             InstantiateStormSpell(spell);
         }
+        else if (spellName.Contains("destruction"))
+        {
+            InstantiateDestructionSpell(spell);
+        }
         else
         {
             Debug.LogWarning($"No cast type matched for spell name: {spell.name}");
@@ -206,7 +210,7 @@ public class SpellCasting : MonoBehaviour
         Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
 
         // Debug.Log($"[Spell Cast] castPoint position: {castPoint.position}, spawnPosition: {spawnPosition}");
-        Debug.Log($"Casted {variant} version of {spell.name}");
+        // Debug.Log($"Casted {variant} version of {spell.name}");
     }
 
     void InstantiateBurstSpell(Spell spell, SpellVariant variant)
@@ -219,7 +223,7 @@ public class SpellCasting : MonoBehaviour
         
         Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
 
-        Debug.Log($"[Spell: Burst] Spawned {spell.name} at {spawnPosition}");
+        // Debug.Log($"[Spell: Burst] Spawned {spell.name} at {spawnPosition}");
     }
 
     void InstantiateStormSpell(Spell spell)
@@ -239,8 +243,24 @@ public class SpellCasting : MonoBehaviour
 
         Quaternion rotation = Quaternion.identity;
         Instantiate(spell, spawnPosition, rotation);
-        Debug.Log($"[Spell: Storm] Spawned {spell.name} at {spawnPosition}");
+        // Debug.Log($"[Spell: Storm] Spawned {spell.name} at {spawnPosition}");
     }
+
+    public void InstantiateDestructionSpell(Spell spellPrefab)
+    {
+        // a point in front of the player
+        Vector3 forwardTarget = playerCamera.position + playerCamera.forward * 15f;
+
+        // spawn position above the player
+        Vector3 spawnPosition = playerGameObject.transform.position + Vector3.up * 15f;
+
+        // direction from spawn point to forwardTarget
+        Vector3 direction = (forwardTarget - spawnPosition).normalized;
+        Quaternion spawnRotation = Quaternion.LookRotation(direction);
+
+        Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+    }
+
 
 
 

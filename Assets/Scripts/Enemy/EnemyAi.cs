@@ -181,8 +181,10 @@ public class EnemyAi : MonoBehaviour
         // animator.SetBool("isAttacking", false);
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(int damage)
+    {
         health -= damage;
+
         if (health <= 0)
         {
             if (ScoreManager.Instance != null)
@@ -193,8 +195,10 @@ public class EnemyAi : MonoBehaviour
             {
                 Debug.Log("ScoreManager not found");
             }
-            Invoke(nameof(DestroyEnemy), 0.5f);
+            animator.SetTrigger("Death");
+            Invoke(nameof(DestroyEnemy), 1f);
         }
+        animator.SetTrigger("Damage");
     }
 
     private void DestroyEnemy() {

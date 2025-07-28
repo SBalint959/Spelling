@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
             //DELETE LATER
             DiscoverAction(SpellAction.Burst);
             DiscoverAction(SpellAction.Storm);
+            DiscoverAction(SpellAction.Destruction);
         }
         else
         {

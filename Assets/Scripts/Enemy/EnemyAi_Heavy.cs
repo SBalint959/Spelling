@@ -197,8 +197,10 @@ public class EnemyAiHeavy : MonoBehaviour
             {
                 Debug.Log("ScoreManager not found");
             }
-            Invoke(nameof(DestroyEnemy), 0.5f);
+            animator.SetTrigger("Death");
+            Invoke(nameof(DestroyEnemy), 1f);
         }
+        animator.SetTrigger("Damage");
     }
 
     private void DestroyEnemy()

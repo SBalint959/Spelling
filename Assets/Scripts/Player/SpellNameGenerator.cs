@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SpellElement { Fire, Water, Earth, Air, Lightning, Shadow }
-public enum SpellAction { Strike, Veil,  Burst, Storm, Ultimate }
+public enum SpellElement { Fire, Water, Earth, Lightning, Shadow }
+public enum SpellAction { Strike, Veil,  Burst, Storm, Destruction }
 
 public enum DifficultyProfile { Easy, Medium, Hard }
 
@@ -14,7 +14,7 @@ public class SpellNameGenerator : MonoBehaviour
 
     private string[] vowels = { "a", "e", "i", "o", "u" };
     private string[] commonConsonants = { "r", "t", "s", "n", "l", "d", "c", "m", "k" };
-    private string[] hardConsonants = { "z", "x", "q", "v", "g", "p" };
+    private string[] hardConsonants = { "z", "x", "v", "g", "p" };
     private string[] trickyCombos = { "th", "ph", "kr", "gr", "tr", "sh" };
     private string[] croatianConsonants = {"č", "ć", "dž", "đ", "š", "ž"};
 
@@ -49,7 +49,7 @@ public class SpellNameGenerator : MonoBehaviour
             SpellElement.Fire => DifficultyProfile.Easy,
             SpellElement.Water => DifficultyProfile.Medium,
             SpellElement.Earth => DifficultyProfile.Medium,
-            SpellElement.Air => DifficultyProfile.Medium,
+            // SpellElement.Air => DifficultyProfile.Medium,
             SpellElement.Lightning => DifficultyProfile.Hard,
             SpellElement.Shadow => DifficultyProfile.Hard,
             _ => DifficultyProfile.Medium
@@ -64,7 +64,7 @@ public class SpellNameGenerator : MonoBehaviour
             SpellAction.Strike => DifficultyProfile.Medium,
             SpellAction.Burst => DifficultyProfile.Medium,
             SpellAction.Storm => DifficultyProfile.Hard,
-            SpellAction.Ultimate => DifficultyProfile.Hard,
+            SpellAction.Destruction => DifficultyProfile.Hard,
             _ => DifficultyProfile.Medium
         };
     }

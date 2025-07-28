@@ -12,26 +12,29 @@ public class Spell : MonoBehaviour
 
     private SphereCollider myCollider;
     private Rigidbody myRigidBody;
-    public bool useOwnCollider = false;
+    // public bool useOwnCollider = false;
 
     private HashSet<GameObject> affectedEnemies = new HashSet<GameObject>();
     private bool isDOTActive = false;
+    private bool hasExploded = false;
+
+    private float moveSpeed = 13f;
 
     private void Awake()
     {
 
         StartCoroutine(ApplyDamageOverTime());
-        if (!useOwnCollider)
-        {
-            SphereCollider myCollider = GetComponent<SphereCollider>();
-            if (myCollider == null)
-            {
-                myCollider = gameObject.AddComponent<SphereCollider>();
-            }
+        // if (!useOwnCollider)
+        // {
+        //     SphereCollider myCollider = GetComponent<SphereCollider>();
+        //     if (myCollider == null)
+        //     {
+        //         myCollider = gameObject.AddComponent<SphereCollider>();
+        //     }
 
-            myCollider.isTrigger = true;
-            myCollider.radius = SpellToCast.SpellRadius;
-        }
+        //     myCollider.isTrigger = true;
+        //     myCollider.radius = SpellToCast.SpellRadius;
+        // }
 
         myRigidBody = GetComponent<Rigidbody>();
         myRigidBody.isKinematic = true;
@@ -43,6 +46,14 @@ public class Spell : MonoBehaviour
     {
         if (SpellToCast.Speed > 0)
             transform.Translate(Vector3.forward * SpellToCast.Speed * Time.deltaTime);
+
+        if (SpellToCast.SpellType == "Destruction")
+        {
+            if (!hasExploded)
+            {
+                transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -112,8 +123,22 @@ public class Spell : MonoBehaviour
                 affectedEnemies.Add(other.gameObject);
             }
             return;
-            
         }
+        else if (SpellToCast.SpellType == "Destruction")
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            {
+                if (hitParticleEffectPrefab != null)
+                {
+                    Vector3 spawnPosition = transform.position;
+                    spawnPosition.y -= 2f;
+                    Instantiate(hitParticleEffectPrefab, spawnPosition, Quaternion.identity);
+                }
+
+                Destroy(gameObject);
+            }
+        }
+
     }
 
     private IEnumerator ApplyDamageOverTime()
