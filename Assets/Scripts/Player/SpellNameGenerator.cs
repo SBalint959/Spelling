@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum SpellElement { Fire, Water, Earth, Lightning, Shadow }
-public enum SpellAction { Strike, Veil,  Burst, Storm, Destruction }
+public enum SpellElement { Fire, Ice, Lightning, Shadow }
+public enum SpellAction { Strike, Burst, Storm, Destruction }
 
 public enum DifficultyProfile { Easy, Medium, Hard }
 
@@ -47,10 +47,10 @@ public class SpellNameGenerator : MonoBehaviour
         return element switch
         {
             SpellElement.Fire => DifficultyProfile.Easy,
-            SpellElement.Water => DifficultyProfile.Medium,
-            SpellElement.Earth => DifficultyProfile.Medium,
+            SpellElement.Ice => DifficultyProfile.Medium,
+            // SpellElement.Earth => DifficultyProfile.Medium,
             // SpellElement.Air => DifficultyProfile.Medium,
-            SpellElement.Lightning => DifficultyProfile.Hard,
+            SpellElement.Lightning => DifficultyProfile.Medium,
             SpellElement.Shadow => DifficultyProfile.Hard,
             _ => DifficultyProfile.Medium
         };
@@ -60,8 +60,8 @@ public class SpellNameGenerator : MonoBehaviour
     {
         return action switch
         {
-            SpellAction.Veil => DifficultyProfile.Easy,
-            SpellAction.Strike => DifficultyProfile.Medium,
+            // SpellAction.Veil => DifficultyProfile.Easy,
+            SpellAction.Strike => DifficultyProfile.Easy,
             SpellAction.Burst => DifficultyProfile.Medium,
             SpellAction.Storm => DifficultyProfile.Hard,
             SpellAction.Destruction => DifficultyProfile.Hard,

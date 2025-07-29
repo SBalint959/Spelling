@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+
 
 
 public class GameManager : MonoBehaviour
@@ -15,8 +17,8 @@ public class GameManager : MonoBehaviour
     public SpellNameGenerator spellNameGenerator;
 
     // Discovered elements and actions
-    private HashSet<SpellElement> discoveredElements = new HashSet<SpellElement>();
-    private HashSet<SpellAction> discoveredActions = new HashSet<SpellAction>();
+    private List<SpellElement> discoveredElements = new List<SpellElement>();
+    private List<SpellAction> discoveredActions = new List<SpellAction>();
 
 
     [SerializeField] private GameObject PauseMenu;
@@ -42,9 +44,10 @@ public class GameManager : MonoBehaviour
             DiscoverElement(SpellElement.Fire);
 
             //DELETE LATER
-            DiscoverAction(SpellAction.Burst);
-            DiscoverAction(SpellAction.Storm);
-            DiscoverAction(SpellAction.Destruction);
+            // DiscoverAction(SpellAction.Burst);
+            // DiscoverAction(SpellAction.Storm);
+            // DiscoverAction(SpellAction.Destruction);
+            // DiscoverElement(SpellElement.Ice);
         }
         else
         {
@@ -96,6 +99,32 @@ public class GameManager : MonoBehaviour
             discoveredActions.Add(action);
             Debug.Log($"Discovered Action: {action}");
         }
+    }
+
+    public List<SpellElement> GetUndiscoveredElements()
+    {
+        List<SpellElement> allElements = new List<SpellElement>
+        {
+            SpellElement.Fire,
+            SpellElement.Lightning,
+            SpellElement.Shadow,
+            SpellElement.Ice
+        };
+
+        return allElements.Except(discoveredElements).ToList();
+    }
+
+    public List<SpellAction> GetUndiscoveredActions()
+    {
+        List<SpellAction> allActions = new List<SpellAction>
+        {
+            SpellAction.Strike,
+            SpellAction.Burst,
+            SpellAction.Storm,
+            SpellAction.Destruction,
+        };
+
+        return allActions.Except(discoveredActions).ToList();
     }
 
     public List<SpellElement> GetDiscoveredElements() => new List<SpellElement>(discoveredElements);

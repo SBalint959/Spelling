@@ -15,6 +15,11 @@ public class EnemySpellColilision : MonoBehaviour
         // since it spawns within "enemy"
         Invoke(nameof(EnableCollision), collisionDelay);
     }
+    void Update()
+    {
+        transform.Rotate(2f, 2f, 2f);
+    }
+
 
     void EnableCollision()
     {

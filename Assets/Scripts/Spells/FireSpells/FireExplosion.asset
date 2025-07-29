@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireExplosion
   m_EditorClassIdentifier: 
   DamageAmount: 30
-  Lifetime: 3
+  Lifetime: 2
   Speed: 0
   SpellRadius: 1
   SpellType: Explosion

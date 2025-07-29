@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireBurst_mid
   m_EditorClassIdentifier: 
   DamageAmount: 5
-  Lifetime: 2
+  Lifetime: 1
   Speed: 0
   SpellRadius: 1
   SpellType: Burst

@@ -7,7 +7,7 @@ public class DisplaySpells : MonoBehaviour
 {
 
     public TextMeshProUGUI[] elementTexts = new TextMeshProUGUI[5];
-    public TextMeshProUGUI[] actionTexts = new TextMeshProUGUI[5];
+    public TextMeshProUGUI[] actionTexts = new TextMeshProUGUI[4];
 
     
 

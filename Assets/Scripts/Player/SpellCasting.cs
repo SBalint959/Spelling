@@ -11,6 +11,10 @@ public class SpellCasting : MonoBehaviour
     [SerializeField] private SpellNameGenerator spellNameGenerator;
     [SerializeField] private GameObject playerGameObject;
 
+    public GameObject floatingTextPrefab;
+    public Transform floatingTextSpawnPoint;
+
+
 
     private PlayerMovement playerMovement;
     private string currentInput = "";
@@ -140,6 +144,31 @@ public class SpellCasting : MonoBehaviour
         Debug.Log(bestGeneratedName);
         Debug.Log($"Best distance: '{bestDistance}'");
         InstantiateSpell(spellToCast, (SpellVariant)variant);
+
+        //Write casted spell in UI
+        Color spellColor = Color.white;
+        switch (variant)
+        {
+            case SpellVariant.Perfect:
+                spellColor = new Color(0.208f, 0.71f, 0.239f); //green
+                break;
+            case SpellVariant.Normal:
+                spellColor = new Color(1f, 0.922f, 0f); //yellow
+                break;
+            case SpellVariant.Weak:
+                spellColor = new Color(0.929f, 0.494f, 0f); //orange
+                break;
+        }
+
+        if (floatingTextPrefab != null && floatingTextSpawnPoint != null)
+        {
+            GameObject textObj = Instantiate(floatingTextPrefab, floatingTextSpawnPoint.position, Quaternion.identity, floatingTextSpawnPoint.parent);
+            FloatingSpellText floating = textObj.GetComponent<FloatingSpellText>();
+            if (floating != null)
+            {
+                floating.SetText(currentInput, spellColor);
+            }
+        }
     }
 
 
@@ -239,7 +268,7 @@ public class SpellCasting : MonoBehaviour
         );
 
         // adjust height
-        spawnPosition.y = playerGameObject.transform.position.y - 1;
+        spawnPosition.y = playerGameObject.transform.position.y - 1.5f;
 
         Quaternion rotation = Quaternion.identity;
         Instantiate(spell, spawnPosition, rotation);
