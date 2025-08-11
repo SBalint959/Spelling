@@ -17,3 +17,8 @@ MonoBehaviour:
   Speed: 0
   SpellRadius: 1
   SpellType: Destruction
+  SpellElement: Fire
+  applyKnockback: 0
+  knockbackForce: 2
+  applySlow: 0
+  passThrough: 0

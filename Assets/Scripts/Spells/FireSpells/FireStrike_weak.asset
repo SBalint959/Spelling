@@ -17,3 +17,8 @@ MonoBehaviour:
   Speed: 14
   SpellRadius: 0.4
   SpellType: Strike
+  SpellElement: Fire
+  applyKnockback: 0
+  knockbackForce: 2
+  applySlow: 0
+  passThrough: 0

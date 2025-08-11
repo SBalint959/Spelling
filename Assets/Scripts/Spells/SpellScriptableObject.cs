@@ -9,6 +9,15 @@ public class SpellScriptableObject : ScriptableObject
     public float SpellRadius = 0.5f;
     public string SpellType = "";
 
+    public string SpellElement = "";
+
+    public bool applyKnockback = false;
+    public float knockbackForce = 2f;
+    public bool applySlow = false;
+    public bool passThrough = false;
+    
+
+
     // Status effects
     // Cooldown
     // Magic elements

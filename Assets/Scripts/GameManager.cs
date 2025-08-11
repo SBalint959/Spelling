@@ -44,10 +44,10 @@ public class GameManager : MonoBehaviour
             DiscoverElement(SpellElement.Fire);
 
             //DELETE LATER
-            // DiscoverAction(SpellAction.Burst);
-            // DiscoverAction(SpellAction.Storm);
-            // DiscoverAction(SpellAction.Destruction);
-            // DiscoverElement(SpellElement.Ice);
+            DiscoverAction(SpellAction.Burst);
+            DiscoverAction(SpellAction.Storm);
+            DiscoverAction(SpellAction.Destruction);
+            DiscoverElement(SpellElement.Ice);
         }
         else
         {

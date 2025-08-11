@@ -248,7 +248,7 @@ public class SpellCasting : MonoBehaviour
 
         Vector3 spawnPosition = playerGameObject.transform.position;
         spawnPosition.y = playerGameObject.transform.position.y -1;
-        Quaternion spawnRotation = Quaternion.identity;
+        Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
         
         Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
 
@@ -257,7 +257,14 @@ public class SpellCasting : MonoBehaviour
 
     void InstantiateStormSpell(Spell spell)
     {
-        float spawnDistance = 7f;
+        float spawnDistance = 10f;
+
+        if (spell.name.Contains("Ice"))
+        {
+            Debug.Log(spell.name);
+            spawnDistance = 0f;
+        }
+        
 
         // Project forward and drop to ground height
         Vector3 forwardOffset = playerCamera.forward * spawnDistance;
@@ -277,17 +284,29 @@ public class SpellCasting : MonoBehaviour
 
     public void InstantiateDestructionSpell(Spell spellPrefab)
     {
-        // a point in front of the player
-        Vector3 forwardTarget = playerCamera.position + playerCamera.forward * 15f;
+        if (spellPrefab.name.Contains("Fire"))
+        {
+            // a point in front of the player
+            Vector3 forwardTarget = playerCamera.position + playerCamera.forward * 15f;
 
-        // spawn position above the player
-        Vector3 spawnPosition = playerGameObject.transform.position + Vector3.up * 15f;
+            // spawn position above the player
+            Vector3 spawnPosition = playerGameObject.transform.position + Vector3.up * 15f;
 
-        // direction from spawn point to forwardTarget
-        Vector3 direction = (forwardTarget - spawnPosition).normalized;
-        Quaternion spawnRotation = Quaternion.LookRotation(direction);
+            // direction from spawn point to forwardTarget
+            Vector3 direction = (forwardTarget - spawnPosition).normalized;
+            Quaternion spawnRotation = Quaternion.LookRotation(direction);
 
-        Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+            Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+        }
+
+        else if (spellPrefab.name.Contains("Ice"))
+        {
+            Vector3 spawnPosition = playerGameObject.transform.position;
+            spawnPosition.y = playerGameObject.transform.position.y -2;
+            Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+            Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+        }
+        
     }
 
 
