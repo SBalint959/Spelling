@@ -51,7 +51,7 @@ public class SpellNameGenerator : MonoBehaviour
             // SpellElement.Earth => DifficultyProfile.Medium,
             // SpellElement.Air => DifficultyProfile.Medium,
             SpellElement.Lightning => DifficultyProfile.Medium,
-            SpellElement.Shadow => DifficultyProfile.Hard,
+            SpellElement.Shadow => DifficultyProfile.Medium,
             _ => DifficultyProfile.Medium
         };
     }
@@ -63,7 +63,7 @@ public class SpellNameGenerator : MonoBehaviour
             // SpellAction.Veil => DifficultyProfile.Easy,
             SpellAction.Strike => DifficultyProfile.Easy,
             SpellAction.Burst => DifficultyProfile.Medium,
-            SpellAction.Storm => DifficultyProfile.Hard,
+            SpellAction.Storm => DifficultyProfile.Medium,
             SpellAction.Destruction => DifficultyProfile.Hard,
             _ => DifficultyProfile.Medium
         };

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5972637655068225415}
   - component: {fileID: 6926038163183698498}
   - component: {fileID: 5433057896085822754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: twinkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4725,7 +4725,7 @@ GameObject:
   - component: {fileID: 5193301143823621074}
   - component: {fileID: 2005126829454985456}
   - component: {fileID: 1581365689941612752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rune1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9601,7 +9601,7 @@ GameObject:
   - component: {fileID: 6350144976779162184}
   - component: {fileID: 8771780094720934111}
   - component: {fileID: 2895630199676639852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14454,7 +14454,7 @@ GameObject:
   - component: {fileID: 7252775666840129138}
   - component: {fileID: 4604843110879293725}
   - component: {fileID: 3670093419622759284}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor_glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19287,7 +19287,7 @@ GameObject:
   - component: {fileID: 430760955206867325}
   - component: {fileID: 2335487962767571395}
   - component: {fileID: 5380966600324324804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rot_ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24202,7 +24202,7 @@ GameObject:
   - component: {fileID: -3343696575971088523}
   - component: {fileID: 4653084595943149089}
   - component: {fileID: 3187962992947114544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceStorm_weak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29112,7 +29112,7 @@ GameObject:
   - component: {fileID: 7836639521774082814}
   - component: {fileID: 6969128745350474960}
   - component: {fileID: 1910648791410238263}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eye_lwy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33957,7 +33957,7 @@ GameObject:
   - component: {fileID: 8607913031426857482}
   - component: {fileID: 6472058940004051685}
   - component: {fileID: 1794392046865520659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38842,7 +38842,7 @@ GameObject:
   - component: {fileID: 3232105625789357945}
   - component: {fileID: 4084755301975467401}
   - component: {fileID: 6480744025601337994}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43687,7 +43687,7 @@ GameObject:
   - component: {fileID: 1553638761280228097}
   - component: {fileID: 4006804803960815714}
   - component: {fileID: 7538792908283496676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rot_rune
   m_TagString: Untagged
   m_Icon: {fileID: 0}

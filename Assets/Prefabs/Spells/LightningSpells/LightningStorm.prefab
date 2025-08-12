@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8911347522955109627}
   - component: {fileID: 6715672716918346422}
   - component: {fileID: 2270636324092786819}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lightning05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4791,6 +4791,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4858,7 +4861,7 @@ GameObject:
   - component: {fileID: 4602065355300650142}
   - component: {fileID: 2750434179890098760}
   - component: {fileID: 4570538077487410197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shock_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9691,6 +9694,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9758,7 +9764,7 @@ GameObject:
   - component: {fileID: 4557776977799822464}
   - component: {fileID: 5788347561065496197}
   - component: {fileID: 7629738084096980445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SubEmitter0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14542,6 +14548,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -14609,7 +14618,7 @@ GameObject:
   - component: {fileID: 2258596447867075363}
   - component: {fileID: 7281279832046643851}
   - component: {fileID: 3850971605477284267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lightning02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19389,6 +19398,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -19456,7 +19468,7 @@ GameObject:
   - component: {fileID: 8619181432302325379}
   - component: {fileID: 958832984922615717}
   - component: {fileID: 1540959918253290264}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24289,6 +24301,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -24356,7 +24371,7 @@ GameObject:
   - component: {fileID: 6148512288058168841}
   - component: {fileID: 3751639673861709596}
   - component: {fileID: 5722203568134535849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29140,6 +29155,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -29207,7 +29225,7 @@ GameObject:
   - component: {fileID: 3238908262178951925}
   - component: {fileID: 7105383188149993327}
   - component: {fileID: 2391429059860330598}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shock_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34040,6 +34058,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -34107,7 +34128,7 @@ GameObject:
   - component: {fileID: 2450242444705219180}
   - component: {fileID: 762727334628707845}
   - component: {fileID: 7762369068576762035}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SubEmitter0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38891,6 +38912,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -38958,7 +38982,7 @@ GameObject:
   - component: {fileID: 7432161781297330298}
   - component: {fileID: 5373549390979528665}
   - component: {fileID: 3244332663871727468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43791,6 +43815,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -43858,7 +43885,7 @@ GameObject:
   - component: {fileID: 4646604711956449320}
   - component: {fileID: 1832603625043307006}
   - component: {fileID: 3774671643247545904}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48691,6 +48718,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -48758,7 +48788,7 @@ GameObject:
   - component: {fileID: 2407843144003094697}
   - component: {fileID: 215465524664176784}
   - component: {fileID: 4102550097753610087}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53591,6 +53621,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -53658,7 +53691,7 @@ GameObject:
   - component: {fileID: 7367736394768940795}
   - component: {fileID: 7934612946471796838}
   - component: {fileID: 7287268988973097584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58491,6 +58524,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -58558,7 +58594,7 @@ GameObject:
   - component: {fileID: 3561615553819386615}
   - component: {fileID: 186372007320836804}
   - component: {fileID: 3921412200422163774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63391,6 +63427,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -63458,7 +63497,7 @@ GameObject:
   - component: {fileID: 1384573504502048264}
   - component: {fileID: 1646365082689943722}
   - component: {fileID: 4627236112415335378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68291,6 +68330,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -68358,7 +68400,7 @@ GameObject:
   - component: {fileID: 1574227799178333541}
   - component: {fileID: 5819858363621267660}
   - component: {fileID: 1553418284954010754}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lightning03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73138,6 +73180,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -73205,7 +73250,7 @@ GameObject:
   - component: {fileID: 1495959914629051486}
   - component: {fileID: 7371318361716472439}
   - component: {fileID: 4401015437065538816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78038,6 +78083,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -78105,7 +78153,7 @@ GameObject:
   - component: {fileID: 5973146930166575616}
   - component: {fileID: 2794979139984012282}
   - component: {fileID: 6648817924501154326}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82938,6 +82986,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -83005,7 +83056,7 @@ GameObject:
   - component: {fileID: 3496160357619638629}
   - component: {fileID: 8241073612737078853}
   - component: {fileID: 3549372780637506425}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87838,6 +87889,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -87905,7 +87959,7 @@ GameObject:
   - component: {fileID: 8367032886987061460}
   - component: {fileID: 4913321321840350228}
   - component: {fileID: 5675098449262651308}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92690,6 +92744,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -92757,7 +92814,7 @@ GameObject:
   - component: {fileID: 7802043057754121864}
   - component: {fileID: 3719896738304625339}
   - component: {fileID: 4086957754989261588}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97590,6 +97647,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -97657,7 +97717,7 @@ GameObject:
   - component: {fileID: 8940250611001250860}
   - component: {fileID: 5844860538665408614}
   - component: {fileID: 2671216543286207089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shock_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102490,6 +102550,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -102557,7 +102620,7 @@ GameObject:
   - component: {fileID: 725074552531126524}
   - component: {fileID: 2195064181045914630}
   - component: {fileID: 6290815604485687691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107390,6 +107453,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -107457,7 +107523,10 @@ GameObject:
   - component: {fileID: 7618064308201719897}
   - component: {fileID: 522131151227994642}
   - component: {fileID: 3234251510707956633}
-  m_Layer: 0
+  - component: {fileID: -8205000420187163314}
+  - component: {fileID: 3511061456073317231}
+  - component: {fileID: 4858934247506058168}
+  m_Layer: 8
   m_Name: LightningStorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107474,7 +107543,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6148512288058168841}
@@ -112221,6 +112290,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -112277,6 +112349,70 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!54 &-8205000420187163314
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710506932685897598}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &3511061456073317231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710506932685897598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e53eb083a200c4eb0d11ea96c12d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpellToCast: {fileID: 11400000, guid: 02de58dc01f7f9441bb1054415ea5e80, type: 2}
+  hitParticleEffectPrefab: {fileID: 0}
+--- !u!136 &4858934247506058168
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710506932685897598}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.5
+  m_Height: 5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3791019476685422455
 GameObject:
   m_ObjectHideFlags: 0
@@ -112288,7 +112424,7 @@ GameObject:
   - component: {fileID: 6247288341647318947}
   - component: {fileID: 8816217666886477626}
   - component: {fileID: 4117816514595787277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117121,6 +117257,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -117188,7 +117327,7 @@ GameObject:
   - component: {fileID: 7454200906049095586}
   - component: {fileID: 9027492795679037674}
   - component: {fileID: 4646019367397112005}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122021,6 +122160,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -122088,7 +122230,7 @@ GameObject:
   - component: {fileID: 2202596363324813067}
   - component: {fileID: 7970990608129672106}
   - component: {fileID: 5656721047183878590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126921,6 +127063,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -126988,7 +127133,7 @@ GameObject:
   - component: {fileID: 1909182300966916391}
   - component: {fileID: 6446426390124891514}
   - component: {fileID: 4770121426233147617}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131773,6 +131918,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -131840,7 +131988,7 @@ GameObject:
   - component: {fileID: 8867683582944163060}
   - component: {fileID: 5120789788804471715}
   - component: {fileID: 8283056826105956978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136673,6 +136821,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -136740,7 +136891,7 @@ GameObject:
   - component: {fileID: 405471246525060912}
   - component: {fileID: 2503570466322571108}
   - component: {fileID: 1936071614936146396}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141573,6 +141724,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -141640,7 +141794,7 @@ GameObject:
   - component: {fileID: 7850996435372096091}
   - component: {fileID: 1420162784660338360}
   - component: {fileID: 8137977947771760503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146473,6 +146627,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -146540,7 +146697,7 @@ GameObject:
   - component: {fileID: 1338136719559668799}
   - component: {fileID: 7996065097427886670}
   - component: {fileID: 6279166464136356150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151373,6 +151530,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -151440,7 +151600,7 @@ GameObject:
   - component: {fileID: 6500745239508997585}
   - component: {fileID: 6869957397808666685}
   - component: {fileID: 3381681260451655009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: slash_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156224,6 +156384,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -156291,7 +156454,7 @@ GameObject:
   - component: {fileID: 236390846425846283}
   - component: {fileID: 3257293956780514890}
   - component: {fileID: 4266664473939962972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lightning01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161071,6 +161234,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -161138,7 +161304,7 @@ GameObject:
   - component: {fileID: 3126228297430153768}
   - component: {fileID: 8724870849331816134}
   - component: {fileID: 1912016010391218541}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165971,6 +166137,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -166038,7 +166207,7 @@ GameObject:
   - component: {fileID: 5863049012956990715}
   - component: {fileID: 8678651131954713960}
   - component: {fileID: 2716462197364419040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170871,6 +171040,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -170938,7 +171110,7 @@ GameObject:
   - component: {fileID: 4752067834679400125}
   - component: {fileID: 1689324767002530392}
   - component: {fileID: 267404176923945371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shock_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175771,6 +175943,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -175838,7 +176013,7 @@ GameObject:
   - component: {fileID: 1800306748397301046}
   - component: {fileID: 2389520246618776348}
   - component: {fileID: 5487551916828670923}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180671,6 +180846,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -180738,7 +180916,7 @@ GameObject:
   - component: {fileID: 103811053040647775}
   - component: {fileID: 1879633324363894835}
   - component: {fileID: 4123419707481086174}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shock_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185571,6 +185749,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -185638,7 +185819,7 @@ GameObject:
   - component: {fileID: 437721251109452204}
   - component: {fileID: 12371316006936568}
   - component: {fileID: 7582885805873745700}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lightning04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190418,6 +190599,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -190485,7 +190669,7 @@ GameObject:
   - component: {fileID: 3346837951113880364}
   - component: {fileID: 3870495019547368389}
   - component: {fileID: 1558224362558526545}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sl-z05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195260,6 +195444,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -195327,7 +195514,7 @@ GameObject:
   - component: {fileID: 1064026144480319409}
   - component: {fileID: 7980636830333491334}
   - component: {fileID: 6230726242911907361}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200114,6 +200301,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -200181,7 +200371,7 @@ GameObject:
   - component: {fileID: 164801091347782966}
   - component: {fileID: 1879182020654489761}
   - component: {fileID: 2343125837901780354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204965,6 +205155,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -205032,7 +205225,7 @@ GameObject:
   - component: {fileID: 3568721301470194058}
   - component: {fileID: 7847277814782772003}
   - component: {fileID: 1100198883380499733}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209865,6 +210058,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -209932,7 +210128,7 @@ GameObject:
   - component: {fileID: 8318362730132132500}
   - component: {fileID: 5414477137909911862}
   - component: {fileID: 7244910483124560580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Electro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214765,6 +214961,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -214832,7 +215031,7 @@ GameObject:
   - component: {fileID: 429546104135892785}
   - component: {fileID: 2111324838222945803}
   - component: {fileID: 4472201624240232170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lightning06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219612,6 +219811,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -219679,7 +219881,7 @@ GameObject:
   - component: {fileID: 3241365498918377864}
   - component: {fileID: 691729380453540869}
   - component: {fileID: 1409057903431111058}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shock_floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224512,6 +224714,9 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

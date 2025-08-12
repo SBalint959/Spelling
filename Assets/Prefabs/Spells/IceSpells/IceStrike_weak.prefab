@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2836491645620326065}
   - component: {fileID: 7336109911666367670}
   - component: {fileID: 7528861531993247124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slash_Rim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4932,7 +4932,7 @@ GameObject:
   - component: {fileID: 4278158790958881487}
   - component: {fileID: 1423258447110927021}
   - component: {fileID: 1158589540457038883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FX_Pos (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9783,7 +9783,7 @@ GameObject:
   - component: {fileID: 3379839782829132197}
   - component: {fileID: 7154459834264456352}
   - component: {fileID: 2847582278161473290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14704,7 +14704,7 @@ GameObject:
   - component: {fileID: 3147507161903042219}
   - component: {fileID: 8645988448095255733}
   - component: {fileID: 4478152225378998528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FX_Pos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19555,7 +19555,7 @@ GameObject:
   - component: {fileID: 2951119827668004563}
   - component: {fileID: 4285327543805545864}
   - component: {fileID: 4691508072115130042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24388,7 +24388,7 @@ GameObject:
   - component: {fileID: 8238265600379874723}
   - component: {fileID: 3093335428366626499}
   - component: {fileID: 107194783243906031}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: snow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29221,7 +29221,7 @@ GameObject:
   - component: {fileID: 9013339056498082547}
   - component: {fileID: 3116648385065334432}
   - component: {fileID: 6546978999418205572}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34124,7 +34124,7 @@ GameObject:
   - component: {fileID: 2708106112809000586}
   - component: {fileID: 4287680177264413425}
   - component: {fileID: 8668505946168579767}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39027,7 +39027,7 @@ GameObject:
   - component: {fileID: 735614721861226837}
   - component: {fileID: 5761169249801984304}
   - component: {fileID: 9130684331345319}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trail_light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43930,7 +43930,7 @@ GameObject:
   - component: {fileID: 141612023655165189}
   - component: {fileID: 5090210580951564392}
   - component: {fileID: 6672289214124650211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48763,7 +48763,7 @@ GameObject:
   - component: {fileID: 1307020785373712896}
   - component: {fileID: 715110089370704339}
   - component: {fileID: 7878024479681151678}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slash_Rim
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53684,7 +53684,7 @@ GameObject:
   - component: {fileID: 2421551843005456507}
   - component: {fileID: 6483374404639186348}
   - component: {fileID: 6315862478803782209}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58520,7 +58520,7 @@ GameObject:
   - component: {fileID: 6054453919042234622}
   - component: {fileID: 530029349985447347}
   - component: {fileID: 8769069114401223674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceStrike_weak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63489,7 +63489,7 @@ GameObject:
   - component: {fileID: 3556546841132510224}
   - component: {fileID: 8792469717615271890}
   - component: {fileID: 4774731767091804234}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68392,7 +68392,7 @@ GameObject:
   - component: {fileID: 7700871041934582221}
   - component: {fileID: 9075890340587361568}
   - component: {fileID: 2788645847466236813}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}

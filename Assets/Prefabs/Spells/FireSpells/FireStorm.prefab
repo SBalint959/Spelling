@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8099790658286348349}
   - component: {fileID: 6395218167526056445}
   - component: {fileID: 8160479512380061819}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Flow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4859,7 +4859,7 @@ GameObject:
   - component: {fileID: -8220537269038862939}
   - component: {fileID: -6284363844445734213}
   - component: {fileID: 3979930217899280884}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireStorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9770,7 +9770,7 @@ GameObject:
   - component: {fileID: 9094226942675261494}
   - component: {fileID: 5952829621013750934}
   - component: {fileID: 2230368744431989907}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

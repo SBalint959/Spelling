@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8150411304545567958}
   - component: {fileID: 3253943248062947462}
   - component: {fileID: 8685874989265313089}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: glow_Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4865,7 +4865,7 @@ GameObject:
   - component: {fileID: 319128361699552985}
   - component: {fileID: 1205465445576646290}
   - component: {fileID: 3481016930924772391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: gamestar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9786,7 +9786,7 @@ GameObject:
   - component: {fileID: 7874049081212840836}
   - component: {fileID: 1696616436005936144}
   - component: {fileID: 2897106014639824138}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14640,7 +14640,7 @@ GameObject:
   - component: {fileID: 2576869203227064417}
   - component: {fileID: 8451435147805298674}
   - component: {fileID: 8911013988414238993}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floorglow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19494,7 +19494,7 @@ GameObject:
   - component: {fileID: 8913329148633766665}
   - component: {fileID: 6465827114787432095}
   - component: {fileID: 8269355005668518675}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24136,7 +24136,7 @@ GameObject:
   - component: {fileID: 1684576669523000628}
   - component: {fileID: 4279827420265607065}
   - component: {fileID: 3676798719475877829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: flame (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28990,7 +28990,7 @@ GameObject:
   - component: {fileID: 2157383655808152178}
   - component: {fileID: 5981716915550998433}
   - component: {fileID: 8190972911415862331}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle_out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33632,7 +33632,7 @@ GameObject:
   - component: {fileID: 4379890965585167022}
   - component: {fileID: 4325022915396394066}
   - component: {fileID: 8245617060465345404}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: explosion_smoke_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38477,7 +38477,7 @@ GameObject:
   - component: {fileID: 4664502120987339025}
   - component: {fileID: 2711590105529933477}
   - component: {fileID: 7930248623727431883}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43572,7 +43572,7 @@ GameObject:
   - component: {fileID: 3324840406327001549}
   - component: {fileID: 7542187789247234733}
   - component: {fileID: 6314200160887291784}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pulse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48478,7 +48478,7 @@ GameObject:
   - component: {fileID: 5914426400456646432}
   - component: {fileID: 5476898195330702004}
   - component: {fileID: 2480052362882274418}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53354,7 +53354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellToCast: {fileID: 11400000, guid: 1027140048fafc14e9ff71f6b3709bf6, type: 2}
   hitParticleEffectPrefab: {fileID: 5325705802284358827, guid: 765b675c4f9bef54a8882c3ff4a35832, type: 3}
-  useOwnCollider: 0
 --- !u!136 &2480052362882274418
 CapsuleCollider:
   m_ObjectHideFlags: 0

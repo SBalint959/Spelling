@@ -230,13 +230,37 @@ public class SpellCasting : MonoBehaviour
 
     void InstantiateBallSpell(Spell spell, SpellVariant variant)
     {
-        Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
-        Vector3 spawnPosition = castPoint.position;
-        spawnPosition.y = playerGameObject.transform.position.y;
+        string spellName = spell.name.ToLower();
+        if (spellName.Contains("fire") || spellName.Contains("ice"))
+        {
+            Vector3 spawnOffset = playerCamera.forward * 1.2f + Vector3.up * 0.5f;
+            Vector3 spawnPosition = castPoint.position;
+            spawnPosition.y = playerGameObject.transform.position.y;
 
-        Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+            Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
 
-        Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
+            Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
+        }
+        else if (spellName.Contains("lightning"))
+        {
+            Vector3 spawnOffset = playerCamera.forward * 7f;
+            Vector3 spawnPosition = castPoint.position + spawnOffset;
+            spawnPosition.y = playerGameObject.transform.position.y - 1;
+
+            Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+
+            Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
+        }
+        else if (spellName.Contains("shadow"))
+        {
+            // Vector3 spawnOffset =  Vector3.up * 0.5f;
+            Vector3 spawnPosition = playerGameObject.transform.position;
+            spawnPosition.y = playerGameObject.transform.position.y -1f;
+
+            Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+
+            Spell newSpell = Instantiate(spell, spawnPosition, spawnRotation);
+        }
 
         // Debug.Log($"[Spell Cast] castPoint position: {castPoint.position}, spawnPosition: {spawnPosition}");
         // Debug.Log($"Casted {variant} version of {spell.name}");
@@ -302,8 +326,18 @@ public class SpellCasting : MonoBehaviour
         else if (spellPrefab.name.Contains("Ice"))
         {
             Vector3 spawnPosition = playerGameObject.transform.position;
-            spawnPosition.y = playerGameObject.transform.position.y -2;
+            spawnPosition.y = playerGameObject.transform.position.y - 2;
             Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+            Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+        }
+        else if (spellPrefab.name.Contains("Lightning"))
+        {
+            Vector3 spawnOffset = playerCamera.forward * 8f;
+            Vector3 spawnPosition = castPoint.position + spawnOffset;
+            spawnPosition.y = playerGameObject.transform.position.y-1;
+
+            Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+
             Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
         }
         

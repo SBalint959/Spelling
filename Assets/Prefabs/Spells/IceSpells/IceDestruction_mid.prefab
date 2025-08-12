@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -7430181317728286618}
   - component: {fileID: -4966970438850325212}
   - component: {fileID: 6460560837395691590}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceDestruction_mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 1, z: 3.5}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1365896366508349652}
@@ -4933,7 +4933,7 @@ GameObject:
   - component: {fileID: 1365896366508349652}
   - component: {fileID: 2363271133351208160}
   - component: {fileID: 3209444461818674502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}

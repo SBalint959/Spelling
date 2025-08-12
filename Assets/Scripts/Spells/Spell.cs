@@ -70,34 +70,62 @@ public class Spell : MonoBehaviour
             EnemyAiHeavy heavy = other.GetComponent<EnemyAiHeavy>();
 
             EnemyStatus status = other.GetComponent<EnemyStatus>();
+            if (SpellToCast.SpellElement == "Fire" || SpellToCast.SpellElement == "Ice" || SpellToCast.SpellElement == "Dark")
+            {
+                //DAMAGE
+                if (enemy != null)
+                {
+                    enemy.TakeDamage((int)SpellToCast.DamageAmount);
+                }
+                else if (sniper != null)
+                {
+                    sniper.TakeDamage((int)SpellToCast.DamageAmount);
+                }
+                else if (heavy != null)
+                {
+                    heavy.TakeDamage((int)SpellToCast.DamageAmount);
+                }
 
-            //DAMAGE
-            if (enemy != null)
-            {
-                enemy.TakeDamage((int)SpellToCast.DamageAmount);
-            }
-            else if (sniper != null)
-            {
-                sniper.TakeDamage((int)SpellToCast.DamageAmount);
-            }
-            else if (heavy != null)
-            {
-                heavy.TakeDamage((int)SpellToCast.DamageAmount);
-            }
-            
-            //SLOW
-            if (status != null && SpellToCast.applySlow)
-            {
-                status.ApplySlow(0.5f, 3f); // slow to 50% speed for 3 seconds
-            }
+                //SLOW
+                if (status != null && SpellToCast.applySlow)
+                {
+                    status.ApplySlow(0.5f, 3f); // slow to 50% speed for 3 seconds
+                }
 
-            //HIT PARTICLE
-            if (hitParticleEffectPrefab != null)
-            {
-                Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
-            }
+                //HIT PARTICLE
+                if (hitParticleEffectPrefab != null)
+                {
+                    Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
+                }
+                
 
-            if (!SpellToCast.passThrough) Destroy(gameObject);
+                if (SpellToCast.applyKnockback)
+                {
+                    var kb = other.GetComponent<EnemyKnockback>();
+                    if (kb != null)
+                    {
+                        Vector3 knockDir = (other.transform.position - transform.position).normalized;
+                        kb.ApplyKnockback(knockDir, SpellToCast.knockbackForce);
+                    }
+                }
+
+                if (!SpellToCast.passThrough) Destroy(gameObject);
+            }
+            else if (SpellToCast.SpellElement == "Lightning")
+            {
+                StartCoroutine(DelayedDamage(enemy, sniper, heavy, SpellToCast.DamageAmount, 0.5f));
+                //SLOW
+                if (status != null && SpellToCast.applySlow)
+                {
+                    status.ApplySlow(0.01f, 3f); // slow to 50% speed for 3 seconds
+                }
+
+                //HIT PARTICLE
+                if (hitParticleEffectPrefab != null)
+                {
+                    Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
+                }
+            }
         }
         else if (SpellToCast.SpellType == "Burst")
         {
@@ -107,22 +135,39 @@ public class Spell : MonoBehaviour
             EnemyAiHeavy heavy = other.GetComponent<EnemyAiHeavy>();
 
             Rigidbody targetRb = other.attachedRigidbody;
+            EnemyStatus status = other.GetComponent<EnemyStatus>();
 
-            if (enemy != null)
+            if (SpellToCast.SpellElement != "Lightning")
             {
-                enemy.TakeDamage((int)SpellToCast.DamageAmount);
-            }
-            else if (sniper != null)
-            {
-                sniper.TakeDamage((int)SpellToCast.DamageAmount);
-            }
-            else if (heavy != null)
-            {
-                heavy.TakeDamage((int)SpellToCast.DamageAmount);
-            }
 
 
-            if (SpellToCast.applyKnockback )
+                if (enemy != null)
+                {
+                    enemy.TakeDamage((int)SpellToCast.DamageAmount);
+                }
+                else if (sniper != null)
+                {
+                    sniper.TakeDamage((int)SpellToCast.DamageAmount);
+                }
+                else if (heavy != null)
+                {
+                    heavy.TakeDamage((int)SpellToCast.DamageAmount);
+                }
+            }
+
+
+            //SLOW
+            if (status != null && SpellToCast.applySlow && SpellToCast.SpellElement == "Lightning")
+            {
+                status.ApplySlow(0.01f, 3f); // slow to 50% speed for 3 seconds
+            }
+            if (!affectedEnemies.Contains(other.gameObject) && SpellToCast.SpellElement == "Lightning")
+            {
+                affectedEnemies.Add(other.gameObject);
+            }
+
+
+            if (SpellToCast.applyKnockback)
             {
                 // Vector3 knockbackDirection = (other.transform.position - transform.position).normalized;
                 // targetRb.AddForce(knockbackDirection * SpellToCast.knockbackForce, ForceMode.Impulse);
@@ -140,15 +185,20 @@ public class Spell : MonoBehaviour
             }
 
             Destroy(gameObject, 2f);
+            
         }
         else if (SpellToCast.SpellType == "Storm")
         {
             EnemyStatus status = other.GetComponent<EnemyStatus>();
 
             //SLOW
-            if (status != null && SpellToCast.applySlow)
+            if (status != null && SpellToCast.applySlow && SpellToCast.SpellElement == "Ice")
             {
                 status.ApplySlow(0.5f, 3f); // slow to 50% speed for 3 seconds
+            }
+            if (status != null && SpellToCast.applySlow && SpellToCast.SpellElement == "Lightning")
+            {
+                status.ApplySlow(0.1f, 3f); // slow to 50% speed for 3 seconds
             }
 
             if (!affectedEnemies.Contains(other.gameObject))
@@ -196,7 +246,7 @@ public class Spell : MonoBehaviour
                 }
 
 
-                if (SpellToCast.applyKnockback )
+                if (SpellToCast.applyKnockback)
                 {
                     // Vector3 knockbackDirection = (other.transform.position - transform.position).normalized;
                     // targetRb.AddForce(knockbackDirection * SpellToCast.knockbackForce, ForceMode.Impulse);
@@ -214,6 +264,26 @@ public class Spell : MonoBehaviour
                     status.ApplySlow(0.5f, 3f); // slow to 50% speed for 3 seconds
                 }
 
+            }
+            else if (SpellToCast.SpellElement == "Lightning")
+            {
+                EnemyAi enemy = other.GetComponent<EnemyAi>();
+                EnemyAiSniper sniper = other.GetComponent<EnemyAiSniper>();
+                EnemyAiHeavy heavy = other.GetComponent<EnemyAiHeavy>();
+
+                EnemyStatus status = other.GetComponent<EnemyStatus>();
+                StartCoroutine(DelayedDamage(enemy, sniper, heavy, SpellToCast.DamageAmount, 1.5f));
+                //SLOW
+                if (status != null && SpellToCast.applySlow)
+                {
+                    status.ApplySlow(0.01f, 4f); // slow to 50% speed for 3 seconds
+                }
+
+                //HIT PARTICLE
+                if (hitParticleEffectPrefab != null)
+                {
+                    Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
+                }
             }
         }
 
@@ -246,6 +316,25 @@ public class Spell : MonoBehaviour
 
         Destroy(gameObject);
     }
+    
+    private IEnumerator DelayedDamage(EnemyAi enemy, EnemyAiSniper sniper, EnemyAiHeavy heavy, float damage, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        if (enemy != null)
+        {
+            enemy.TakeDamage((int)damage);
+        }
+        else if (sniper != null)
+        {
+            sniper.TakeDamage((int)damage);
+        }
+        else if (heavy != null)
+        {
+            heavy.TakeDamage((int)damage);
+        }
+    }
+
 
 
 

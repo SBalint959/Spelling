@@ -48,6 +48,8 @@ public class GameManager : MonoBehaviour
             DiscoverAction(SpellAction.Storm);
             DiscoverAction(SpellAction.Destruction);
             DiscoverElement(SpellElement.Ice);
+            DiscoverElement(SpellElement.Lightning);
+            DiscoverElement(SpellElement.Shadow);
         }
         else
         {

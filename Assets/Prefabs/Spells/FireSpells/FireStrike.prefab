@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4934685225716775145}
   - component: {fileID: 2813908533888460232}
   - component: {fileID: 4075727756217885444}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 4282974786941118333}
   - component: {fileID: 6736304760952149303}
   - component: {fileID: 7885369824418159436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waterball_graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4954,7 +4954,7 @@ GameObject:
   - component: {fileID: 4342312580397315392}
   - component: {fileID: 6605389958794180736}
   - component: {fileID: 1999853751896096489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireStrike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5041,7 +5041,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellToCast: {fileID: 11400000, guid: ae294eb8dbbcc524ca7956f11b9c06e5, type: 2}
   hitParticleEffectPrefab: {fileID: 2255134666550130738, guid: c5e5c139eade6194ea237f877103ad21, type: 3}
-  useOwnCollider: 0
 --- !u!1001 &2019229292073954157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5050,9 +5049,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1993198157200535481}
     m_Modifications:
+    - target: {fileID: 71696672678172482, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1599916293069912692, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
       propertyPath: m_Name
       value: FX_Fireball
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599916293069912692, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920471469480002298, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2936182673895566155, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
       propertyPath: m_LocalScale.x
@@ -5106,6 +5117,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3390332762864235626, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4440409902482750107, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4480447476903733127, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146054079257708279, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760755536360562290, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7629915763132079940, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9007711620446931539, guid: c8d25dcfaf22f224ea40ad69164e7f1b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5127,6 +5166,10 @@ PrefabInstance:
     - target: {fileID: 688028667170075918, guid: 9221a6acc636906439da624a1a7dce3a, type: 3}
       propertyPath: m_Name
       value: Fire_Trail
+      objectReference: {fileID: 0}
+    - target: {fileID: 688028667170075918, guid: 9221a6acc636906439da624a1a7dce3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 688028667170075918, guid: 9221a6acc636906439da624a1a7dce3a, type: 3}
       propertyPath: m_IsActive
@@ -5151,6 +5194,10 @@ PrefabInstance:
     - target: {fileID: 6334707126303224871, guid: 9221a6acc636906439da624a1a7dce3a, type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6371647235826255679, guid: 9221a6acc636906439da624a1a7dce3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8955111251747092549, guid: 9221a6acc636906439da624a1a7dce3a, type: 3}
       propertyPath: m_LocalScale.x

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8121244126962385514}
   - component: {fileID: 3283879289544405059}
   - component: {fileID: 4668272990076587816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4833,7 +4833,7 @@ GameObject:
   - component: {fileID: 7457655731232148300}
   - component: {fileID: 1647962069258536138}
   - component: {fileID: 7183933868898499743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StartWave (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9754,7 +9754,7 @@ GameObject:
   - component: {fileID: 4050604861908256126}
   - component: {fileID: 6667410560844362675}
   - component: {fileID: 5119286489875056099}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StartWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14678,7 +14678,7 @@ GameObject:
   - component: {fileID: -4736603780471071720}
   - component: {fileID: 7597294972895412917}
   - component: {fileID: -972823288993427062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FireDestruction_weak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19575,7 +19575,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellToCast: {fileID: 11400000, guid: 8d078067b8270854a98d7095549abc0c, type: 2}
   hitParticleEffectPrefab: {fileID: 6537900267813054696, guid: 9ea6f261065ba0b4aa3ec0cd76b82c2f, type: 3}
-  useOwnCollider: 0
 --- !u!1 &5628656459216723402
 GameObject:
   m_ObjectHideFlags: 0
@@ -19587,7 +19586,7 @@ GameObject:
   - component: {fileID: 7107781801595913066}
   - component: {fileID: 5474562387678196018}
   - component: {fileID: 3952870191180674470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: aura2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24432,7 +24431,7 @@ GameObject:
   - component: {fileID: 4934101968910720666}
   - component: {fileID: 5383279097387929390}
   - component: {fileID: 7161131809092887682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: aura2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29277,7 +29276,7 @@ GameObject:
   - component: {fileID: 634453332226534686}
   - component: {fileID: 8025677673384110555}
   - component: {fileID: 9027656069038650230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: aura2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34122,7 +34121,7 @@ GameObject:
   - component: {fileID: 7707134553937060626}
   - component: {fileID: 4621251873124667059}
   - component: {fileID: 6111865423807175561}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: half
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39025,7 +39024,7 @@ GameObject:
   - component: {fileID: 4477699247782217767}
   - component: {fileID: 5189931745442437985}
   - component: {fileID: 6260982168047712742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43879,7 +43878,7 @@ GameObject:
   - component: {fileID: 1033662519754219322}
   - component: {fileID: 3569353813041159671}
   - component: {fileID: 8555311636200119332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Particle_up (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48710,7 +48709,7 @@ GameObject:
   - component: {fileID: 827317640170862505}
   - component: {fileID: 3947889313250546281}
   - component: {fileID: 8647689067702466436}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: aura2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7345114788513114396}
   - component: {fileID: 9012178901967599795}
   - component: {fileID: 7298612644715914811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4644,7 +4644,7 @@ GameObject:
   - component: {fileID: 5081587387860714193}
   - component: {fileID: 1428237474050768115}
   - component: {fileID: 3655947457305872859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EarthDust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9489,7 +9489,7 @@ GameObject:
   - component: {fileID: 4585386089888591140}
   - component: {fileID: 3409092554357348175}
   - component: {fileID: 2264573704493028749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EarthCrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14298,7 +14298,7 @@ GameObject:
   - component: {fileID: 1777898845196822020}
   - component: {fileID: 6656342539877197580}
   - component: {fileID: 759142907193994144}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19093,7 +19093,7 @@ GameObject:
   - component: {fileID: 885367686294000634}
   - component: {fileID: 1390466216194322578}
   - component: {fileID: 6869931245861292034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23903,7 +23903,7 @@ GameObject:
   - component: {fileID: 8167848364832359120}
   - component: {fileID: -4325308183622822620}
   - component: {fileID: 494039101252537156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: IceBurst_weak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28886,7 +28886,7 @@ GameObject:
   - component: {fileID: 1445698203928124137}
   - component: {fileID: 5166681104491383666}
   - component: {fileID: 710813145289923082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RockSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33623,7 +33623,7 @@ GameObject:
   - component: {fileID: 5088703503175111864}
   - component: {fileID: 7921229772091238820}
   - component: {fileID: 7977475035010243133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Embers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
