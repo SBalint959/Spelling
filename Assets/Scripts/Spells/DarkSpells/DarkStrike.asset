@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageAmount: 5
   Lifetime: 10
-  Speed: 15
+  Speed: 20
   SpellRadius: 1
   SpellType: Strike
   SpellElement: Dark

@@ -201,6 +201,16 @@ public class Spell : MonoBehaviour
                 status.ApplySlow(0.1f, 3f); // slow to 50% speed for 3 seconds
             }
 
+            if (SpellToCast.applyKnockback)
+            {
+                var kb = other.GetComponent<EnemyKnockback>();
+                if (kb != null)
+                {
+                    Vector3 knockDir = (other.transform.position - transform.position).normalized;
+                    kb.ApplyKnockback(knockDir, SpellToCast.knockbackForce);
+                }
+            }
+
             if (!affectedEnemies.Contains(other.gameObject))
             {
                 affectedEnemies.Add(other.gameObject);
@@ -246,17 +256,7 @@ public class Spell : MonoBehaviour
                 }
 
 
-                if (SpellToCast.applyKnockback)
-                {
-                    // Vector3 knockbackDirection = (other.transform.position - transform.position).normalized;
-                    // targetRb.AddForce(knockbackDirection * SpellToCast.knockbackForce, ForceMode.Impulse);
-                    var kb = other.GetComponent<EnemyKnockback>();
-                    if (kb != null)
-                    {
-                        Vector3 knockDir = (other.transform.position - transform.position).normalized;
-                        kb.ApplyKnockback(knockDir, SpellToCast.knockbackForce);
-                    }
-                }
+                
 
                 //SLOW
                 if (status != null && SpellToCast.applySlow)
@@ -306,6 +306,16 @@ public class Spell : MonoBehaviour
                 if (enemy != null) enemy.TakeDamage((int)SpellToCast.DamageAmount);
                 else if (sniper != null) sniper.TakeDamage((int)SpellToCast.DamageAmount);
                 else if (heavy != null) heavy.TakeDamage((int)SpellToCast.DamageAmount);
+
+                if (SpellToCast.applyKnockback)
+                {
+                    var kb = obj.GetComponent<EnemyKnockback>();
+                    if (kb != null)
+                    {
+                        Vector3 knockDir = (obj.transform.position - transform.position).normalized;
+                        kb.ApplyKnockback(knockDir, SpellToCast.knockbackForce);
+                    }
+                }
 
                 Debug.Log("enemy burned");
             }
