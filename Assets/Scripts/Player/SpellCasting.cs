@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpellCasting : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class SpellCasting : MonoBehaviour
     public GameObject floatingTextPrefab;
     public Transform floatingTextSpawnPoint;
 
+    public TextMeshProUGUI InputTextUI;
+    public GameObject InputUI;
 
 
     private PlayerMovement playerMovement;
@@ -66,6 +69,7 @@ public class SpellCasting : MonoBehaviour
     {
         isTyping = true;
         currentInput = "";
+        InputUI.SetActive(true);
         typingStartTime = Time.time;
         playerMovement.isMovementDisabled = true;
     }
@@ -101,6 +105,7 @@ public class SpellCasting : MonoBehaviour
                 // }
                 currentInput += c;
                 totalCharactersTyped++;
+                InputTextUI.text = currentInput;
             }
         }
     }
@@ -110,6 +115,9 @@ public class SpellCasting : MonoBehaviour
     {
         isTyping = false;
         playerMovement.isMovementDisabled = false;
+        
+        InputUI.SetActive(false);
+        InputTextUI.text = "";
 
         float typingDuration = Time.time - typingStartTime;
         totalTypingTime += typingDuration;
