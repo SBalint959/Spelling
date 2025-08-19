@@ -41,15 +41,18 @@ public class GameManager : MonoBehaviour
 
             InitializeLists();
             DiscoverAction(SpellAction.Strike);
-            DiscoverElement(SpellElement.Fire);
+            // DiscoverElement(SpellElement.Fire);
+            SpellElement[] allElements = (SpellElement[])System.Enum.GetValues(typeof(SpellElement));
+            SpellElement randomElement = allElements[Random.Range(0, allElements.Length)];
+            DiscoverElement(randomElement);
 
             //DELETE LATER
-            DiscoverAction(SpellAction.Burst);
-            DiscoverAction(SpellAction.Storm);
-            DiscoverAction(SpellAction.Destruction);
-            DiscoverElement(SpellElement.Ice);
-            DiscoverElement(SpellElement.Lightning);
-            DiscoverElement(SpellElement.Shadow);
+            // DiscoverAction(SpellAction.Burst);
+            // DiscoverAction(SpellAction.Storm);
+            // DiscoverAction(SpellAction.Destruction);
+            // DiscoverElement(SpellElement.Ice);
+            // DiscoverElement(SpellElement.Lightning);
+            // DiscoverElement(SpellElement.Shadow);
         }
         else
         {
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Escape))
         {
             isTyping = spellCastingScript.IsPlayerTyping();
             if (!isTyping)

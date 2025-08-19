@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d655d4bdeb46ba4a8790be9c9ae1110, type: 3}
   m_Name: DarkStrike
   m_EditorClassIdentifier: 
-  DamageAmount: 5
+  DamageAmount: 6
   Lifetime: 10
   Speed: 20
   SpellRadius: 1

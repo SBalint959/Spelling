@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1057182934981304268}
   - component: {fileID: 4122883730834373510}
   - component: {fileID: 2121361148447948603}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4865,7 +4865,7 @@ GameObject:
   - component: {fileID: 6794437812392754832}
   - component: {fileID: 5989711098491953961}
   - component: {fileID: 2241647255505917553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sword_in02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9786,7 +9786,7 @@ GameObject:
   - component: {fileID: 6870072456570842992}
   - component: {fileID: 6431016246342509298}
   - component: {fileID: 8625596691128713967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sword_in01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14707,7 +14707,7 @@ GameObject:
   - component: {fileID: 2917249771148794845}
   - component: {fileID: 3286630220243648511}
   - component: {fileID: 8762348927804335766}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19561,7 +19561,7 @@ GameObject:
   - component: {fileID: 980149736075181869}
   - component: {fileID: 2741666191724230623}
   - component: {fileID: 109580137833488299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FX_Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24411,7 +24411,7 @@ GameObject:
   - component: {fileID: 8501561050554839958}
   - component: {fileID: 4069386141095060640}
   - component: {fileID: 2067666446547771829}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sword_Sci-fi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29323,7 +29323,7 @@ GameObject:
   - component: {fileID: 7309283874933751991}
   - component: {fileID: 3437698141400939120}
   - component: {fileID: 7578545860469132532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shock wave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34169,7 +34169,9 @@ GameObject:
   - component: {fileID: 4772869786759178478}
   - component: {fileID: 1102385566245560787}
   - component: {fileID: 4556229724185062279}
-  m_Layer: 0
+  - component: {fileID: 5689969065534219070}
+  - component: {fileID: 8827427447303793480}
+  m_Layer: 8
   m_Name: ShadowBurst
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34185,7 +34187,7 @@ Transform:
   m_GameObject: {fileID: 5948348765637165832}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -39015,6 +39017,47 @@ CapsuleCollider:
   m_Height: 15
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 12.5}
+--- !u!54 &5689969065534219070
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948348765637165832}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8827427447303793480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5948348765637165832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e53eb083a200c4eb0d11ea96c12d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpellToCast: {fileID: 11400000, guid: d7ac283df960f7b4dbf49a7e97453902, type: 2}
+  hitParticleEffectPrefab: {fileID: 0}
 --- !u!1 &6708060341238027375
 GameObject:
   m_ObjectHideFlags: 0
@@ -39026,7 +39069,7 @@ GameObject:
   - component: {fileID: 4279062683307192806}
   - component: {fileID: 5585680884833755496}
   - component: {fileID: 8848895635399386229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Surface airflow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43871,7 +43914,7 @@ GameObject:
   - component: {fileID: 2084046848306294745}
   - component: {fileID: 7707547158920613776}
   - component: {fileID: 848272566669351506}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sword_out
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48792,7 +48835,7 @@ GameObject:
   - component: {fileID: 4016489016293080600}
   - component: {fileID: 1846261472149311818}
   - component: {fileID: 8792734802378095849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FX_Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53699,7 +53742,7 @@ GameObject:
   - component: {fileID: 2694931198564135364}
   - component: {fileID: 7652387661551967282}
   - component: {fileID: 8936923782770190782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58546,7 +58589,7 @@ GameObject:
   - component: {fileID: 7323033759655538428}
   - component: {fileID: 1512102121333080715}
   - component: {fileID: 6999244059269289974}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Glow (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

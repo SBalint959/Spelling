@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d655d4bdeb46ba4a8790be9c9ae1110, type: 3}
   m_Name: IceBurst
   m_EditorClassIdentifier: 
-  DamageAmount: 3
+  DamageAmount: 5
   Lifetime: 2
   Speed: 0
   SpellRadius: 1
   SpellType: Burst
   SpellElement: Ice
   applyKnockback: 1
-  knockbackForce: 10
+  knockbackForce: 16
   applySlow: 0
   passThrough: 0

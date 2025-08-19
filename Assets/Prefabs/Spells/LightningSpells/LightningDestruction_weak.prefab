@@ -151481,7 +151481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e53eb083a200c4eb0d11ea96c12d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellToCast: {fileID: 11400000, guid: e8e216c381d24d445bbe1086322271be, type: 2}
+  SpellToCast: {fileID: 11400000, guid: 8641d399e90d1304d93392cf8db6fe52, type: 2}
   hitParticleEffectPrefab: {fileID: 0}
 --- !u!1 &7538128387139390951
 GameObject:

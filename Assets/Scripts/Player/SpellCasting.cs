@@ -49,8 +49,14 @@ public class SpellCasting : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !isTyping)
-            StartTyping();
+        // if (Input.GetKeyDown(KeyCode.F)  && !isTyping)
+        //     StartTyping();
+
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            if (!isTyping) { StartTyping(); return; }
+            else { CastSpell(); return; }
+        }
 
         if (isTyping)
             HandleTyping();
@@ -70,7 +76,15 @@ public class SpellCasting : MonoBehaviour
 
     void HandleTyping()
     {
-        bool fIgnored = false;
+        // bool fIgnored = false;
+
+        // // Check for Enter OR Left Ctrl separately
+        // if (Input.GetKeyDown(KeyCode.LeftControl))
+        // {
+        //     CastSpell();
+        //     return;
+        // }
+
         foreach (char c in Input.inputString)
         {
             if (c == '\n' || c == '\r')
@@ -80,16 +94,17 @@ public class SpellCasting : MonoBehaviour
             }
             else
             {
-                if (currentInput.Length == 0 && c == 'f' && !fIgnored)
-                {
-                    fIgnored = true;
-                    continue;
-                }
+                // if (currentInput.Length == 0 && c == 'f' && !fIgnored)
+                // {
+                //     fIgnored = true;
+                //     continue;
+                // }
                 currentInput += c;
                 totalCharactersTyped++;
             }
         }
     }
+
 
     void CastSpell()
     {
@@ -334,12 +349,23 @@ public class SpellCasting : MonoBehaviour
         {
             Vector3 spawnOffset = playerCamera.forward * 8f;
             Vector3 spawnPosition = castPoint.position + spawnOffset;
-            spawnPosition.y = playerGameObject.transform.position.y-1;
+            spawnPosition.y = playerGameObject.transform.position.y - 1;
 
             Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
 
             Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
         }
+        else if (spellPrefab.name.Contains("Shadow"))
+        {
+            Vector3 spawnOffset = playerCamera.forward * 8f;
+            Vector3 spawnPosition = castPoint.position + spawnOffset;
+            spawnPosition.y = playerGameObject.transform.position.y - 2;
+
+            Quaternion spawnRotation = Quaternion.LookRotation(playerCamera.forward);
+
+            Spell newSpell = Instantiate(spellPrefab, spawnPosition, spawnRotation);
+        }
+
         
     }
 

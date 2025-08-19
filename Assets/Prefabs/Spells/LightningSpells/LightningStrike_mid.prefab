@@ -43968,7 +43968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e53eb083a200c4eb0d11ea96c12d38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellToCast: {fileID: 11400000, guid: ce68c7a02c275534181d4bf7588909bc, type: 2}
+  SpellToCast: {fileID: 11400000, guid: 654dc45c71ebad94abd56815d0d2310e, type: 2}
   hitParticleEffectPrefab: {fileID: 0}
 --- !u!136 &7394362057626287933
 CapsuleCollider:

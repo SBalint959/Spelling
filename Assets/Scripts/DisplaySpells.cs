@@ -24,7 +24,7 @@ public class DisplaySpells : MonoBehaviour
             return;
         }
 
-        // === Element display (ordered by enum) ===
+        //Element display (ordered by enum)
         var discoveredElements = GameManager.Instance.GetDiscoveredElements();
 
         for (int i = 0; i < elementTexts.Length && i < System.Enum.GetValues(typeof(SpellElement)).Length; i++)
@@ -42,7 +42,7 @@ public class DisplaySpells : MonoBehaviour
             }
         }
 
-        // === Action display (ordered by enum) ===
+        // Action display (ordered by enum) 
         var discoveredActions = GameManager.Instance.GetDiscoveredActions();
 
         for (int j = 0; j < actionTexts.Length && j < System.Enum.GetValues(typeof(SpellAction)).Length; j++)

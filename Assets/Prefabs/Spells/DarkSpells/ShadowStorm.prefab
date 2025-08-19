@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2069760344665795840}
   - component: {fileID: 1897594656595513589}
   - component: {fileID: 3469406791626738474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShadowStorm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4910,7 +4910,7 @@ GameObject:
   - component: {fileID: 1383568330370536380}
   - component: {fileID: 1563318518589831125}
   - component: {fileID: 4284646132691953705}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9755,7 +9755,7 @@ GameObject:
   - component: {fileID: 3199897640303709128}
   - component: {fileID: 7583421444268418789}
   - component: {fileID: 4650587848359561817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14600,7 +14600,7 @@ GameObject:
   - component: {fileID: 624127693959215132}
   - component: {fileID: 1022413458552950922}
   - component: {fileID: 2576990928070371097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19445,7 +19445,7 @@ GameObject:
   - component: {fileID: 117130388751212506}
   - component: {fileID: 1349734976675488441}
   - component: {fileID: 1718381975678206714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24352,7 +24352,7 @@ GameObject:
   - component: {fileID: 4230937182250271548}
   - component: {fileID: 2417802818792399521}
   - component: {fileID: 2272580786755846735}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

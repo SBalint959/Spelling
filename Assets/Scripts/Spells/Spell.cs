@@ -93,11 +93,11 @@ public class Spell : MonoBehaviour
                 }
 
                 //HIT PARTICLE
-                if (hitParticleEffectPrefab != null)
+                if (hitParticleEffectPrefab != null && (enemy != null || sniper != null || heavy != null))
                 {
                     Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
                 }
-                
+
 
                 if (SpellToCast.applyKnockback)
                 {
@@ -185,7 +185,7 @@ public class Spell : MonoBehaviour
             }
 
             Destroy(gameObject, 2f);
-            
+
         }
         else if (SpellToCast.SpellType == "Storm")
         {
@@ -256,7 +256,7 @@ public class Spell : MonoBehaviour
                 }
 
 
-                
+
 
                 //SLOW
                 if (status != null && SpellToCast.applySlow)
@@ -283,6 +283,24 @@ public class Spell : MonoBehaviour
                 if (hitParticleEffectPrefab != null)
                 {
                     Instantiate(hitParticleEffectPrefab, transform.position, Quaternion.identity);
+                }
+            }
+            else if (SpellToCast.SpellElement == "Dark")
+            {
+                if (!affectedEnemies.Contains(other.gameObject))
+                {
+                    affectedEnemies.Add(other.gameObject);
+                }
+
+                //Knockback towards spell
+                if (SpellToCast.applyKnockback)
+                {
+                    var kb = other.GetComponent<EnemyKnockback>();
+                    if (kb != null)
+                    {
+                        Vector3 knockDir = (transform.position - other.transform.position).normalized;
+                        kb.ApplyKnockback(knockDir, SpellToCast.knockbackForce);
+                    }
                 }
             }
         }

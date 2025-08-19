@@ -8,9 +8,11 @@ public class ScoreManager : MonoBehaviour
 
     public PowerUpSpawner PowerUpManager;
 
+    public GameObject InfoUI;
+
     private int currentScore = 0;
 
-    private float powerUpCounter = 0f;
+    private float powerUpCounter = 0.5f;
     private TextMeshProUGUI pointsText; // <- TextMeshPro instead of UnityEngine.UI.Text
 
     private void Awake()
@@ -39,21 +41,22 @@ public class ScoreManager : MonoBehaviour
         if (pointsText != null)
             pointsText.text = currentScore.ToString();
 
-        if (currentScore >= powerUpCounter * 100)
+        if (currentScore >= powerUpCounter * 100 && powerUpCounter < 8.0f)
         {
             PowerUpManager.SpawnPowerUp();
+            InfoUI.SetActive(true);
 
-            if (powerUpCounter < 2.0f)
+            if (powerUpCounter < 1.5f)
             {
                 powerUpCounter += 0.5f;
             }
-            else if (powerUpCounter > 4.0f)
+            else if (powerUpCounter > 2.0f)
             {
                 powerUpCounter += 2.0f;
             }
             else
             {
-                powerUpCounter += 1.0f;
+                powerUpCounter += 1.5f;
             }
         }
     }

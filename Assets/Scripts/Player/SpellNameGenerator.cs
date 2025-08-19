@@ -13,7 +13,7 @@ public class SpellNameGenerator : MonoBehaviour
     public Dictionary<SpellAction, string> ActionWords { get; private set; }
 
     private string[] vowels = { "a", "e", "i", "o", "u" };
-    private string[] commonConsonants = { "r", "t", "s", "n", "l", "d", "c", "m", "k" };
+    private string[] commonConsonants = { "f", "r", "t", "s", "n", "l", "d", "c", "m", "k" };
     private string[] hardConsonants = { "z", "x", "v", "g", "p" };
     private string[] trickyCombos = { "th", "ph", "kr", "gr", "tr", "sh" };
     private string[] croatianConsonants = {"č", "ć", "dž", "đ", "š", "ž"};

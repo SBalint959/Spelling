@@ -71,7 +71,7 @@ public class PowerUpMenu : MonoBehaviour
             ShowElementImage(chosen[0], true);
             ShowElementImage(chosen[1], false);
         }
-        else if (actionAvailable)
+        else if (actionAvailable && !elementAvailable && undiscoveredActions.Count >= 2)
         {
             // Two actions
             List<SpellAction> chosen = undiscoveredActions.OrderBy(a => Random.value).Take(2).ToList();
@@ -80,6 +80,19 @@ public class PowerUpMenu : MonoBehaviour
 
             actionText1.text = offeredAction1.Value.ToString();
             actionText2.text = offeredAction2.Value.ToString();
+        }
+        else if (elementAvailable && !actionAvailable && undiscoveredElements.Count == 1)
+        {
+            offeredElement1 = undiscoveredElements[Random.Range(0, undiscoveredElements.Count)];
+            ShowElementImage(offeredElement1.Value, true);
+            ShowElementImage(offeredElement1.Value, false);
+        }
+        else if (actionAvailable && !elementAvailable && undiscoveredActions.Count == 1)
+        {
+            offeredAction1 = undiscoveredActions[Random.Range(0, undiscoveredActions.Count)];
+
+            actionText1.text = offeredAction1.Value.ToString();
+            actionText2.text = offeredAction1.Value.ToString();
         }
     }
 
@@ -152,6 +165,10 @@ public class PowerUpMenu : MonoBehaviour
         {
             gameManager.DiscoverAction(offeredAction2.Value);
         }
+        else if (offeredAction1 != null)
+        {
+            gameManager.DiscoverAction(offeredAction1.Value);
+        }
 
         CleanupAndClose();
     }
@@ -165,6 +182,10 @@ public class PowerUpMenu : MonoBehaviour
         else if (offeredAction1 != null)
         {
             gameManager.DiscoverAction(offeredAction1.Value);
+        }
+        else if (offeredElement1 != null)
+        {
+            gameManager.DiscoverElement(offeredElement1.Value);
         }
 
         CleanupAndClose();

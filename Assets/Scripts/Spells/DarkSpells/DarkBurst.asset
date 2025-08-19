@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d655d4bdeb46ba4a8790be9c9ae1110, type: 3}
   m_Name: DarkBurst
   m_EditorClassIdentifier: 
-  DamageAmount: 1
+  DamageAmount: 8
   Lifetime: 1
   Speed: 0
-  SpellRadius: 0.5
+  SpellRadius: 1
   SpellType: Burst
   SpellElement: Dark
   applyKnockback: 1
