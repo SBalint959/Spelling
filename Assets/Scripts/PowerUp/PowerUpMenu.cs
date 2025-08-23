@@ -32,6 +32,7 @@ public class PowerUpMenu : MonoBehaviour
 
     public GameObject PowerUpParticleEffectPrefab;
     public GameObject Player;
+    
 
     void Start()
     {
@@ -43,6 +44,7 @@ public class PowerUpMenu : MonoBehaviour
     {
         // menuPanel.SetActive(true);
         PauseGame();
+        gameManager.DisableTime();
 
         List<SpellElement> undiscoveredElements = gameManager.GetUndiscoveredElements();
         List<SpellAction> undiscoveredActions = gameManager.GetUndiscoveredActions();
@@ -121,6 +123,7 @@ public class PowerUpMenu : MonoBehaviour
 
     public void UnPauseGame()
     {
+        gameManager.EnableTime();
         Time.timeScale = 1f;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

@@ -57,11 +57,6 @@ public class EnemyAi : MonoBehaviour
 
     private void Patrolling()
     {
-        // Debug.Log("Patrolling");
-        // Debug.Log("Agent position: " + transform.position);
-        // Debug.Log("Walkpoint position: " + walkPoint);
-        // animator.SetBool("isWalking", true);
-        // animator.SetBool("isAttacking", false);
         animator.SetFloat("Speed", agent.velocity.magnitude);
 
 
@@ -103,7 +98,6 @@ public class EnemyAi : MonoBehaviour
         // Force new walkpoint if stuck too long
         if (stuckTimer >= maxStuckTime)
         {
-            // Debug.LogWarning("Bot stuck! Forcing new walk point.");
             walkPointSet = false;
             stuckTimer = 0f;
         }
@@ -118,16 +112,9 @@ public class EnemyAi : MonoBehaviour
 
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
-
-        // Debug.Log(walkPoint);
         
     }
     private void ChasePlayer() {
-        // Debug.Log("Chasing");
-        // Debug.Log("Player position: " + player.position);
-        // Debug.Log("Agent position: " + transform.position);
-        // animator.SetBool("isWalking", true);
-        // animator.SetBool("isAttacking", false);
         animator.SetFloat("Speed", agent.velocity.magnitude);
         agent.SetDestination(player.position);
     }
@@ -146,13 +133,8 @@ public class EnemyAi : MonoBehaviour
 
     private void AttackPlayer()
     {
-        // Debug.Log("Attacking");
-        //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
-        // animator.SetBool("isWalking", false);
 
-
-        // transform.LookAt(player);
         Vector3 flatDirection = player.position - transform.position;
         flatDirection.y = 0f; // Ignore vertical difference
         flatDirection.Normalize();
@@ -160,27 +142,16 @@ public class EnemyAi : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            //Attack code
-            // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            // Rigidbody rb = Instantiate(projectile, spawnPosition, spawnRotation).GetComponent<Rigidbody>();
-
-            // Vector3 shootForce = directionToPlayer * 32f + Vector3.up * 4f;
-            // rb.AddForce(shootForce, ForceMode.Impulse);
             animator.SetTrigger("RightAttack");
-
-            // Invoke(nameof(PerformAttack), 1.4f);
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
 
         }
-        // animator.SetBool("isWalking", true);
-        // animator.SetBool("isAttacking", false);
         animator.SetFloat("Speed", agent.velocity.magnitude);
     }
     private void ResetAttack() {
         alreadyAttacked = false;
-        // animator.SetBool("isAttacking", false);
     }
 
     public void TakeDamage(int damage)

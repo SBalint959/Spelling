@@ -80,14 +80,6 @@ public class SpellCasting : MonoBehaviour
 
     void HandleTyping()
     {
-        // bool fIgnored = false;
-
-        // // Check for Enter OR Left Ctrl separately
-        // if (Input.GetKeyDown(KeyCode.LeftControl))
-        // {
-        //     CastSpell();
-        //     return;
-        // }
 
         foreach (char c in Input.inputString)
         {
@@ -98,11 +90,6 @@ public class SpellCasting : MonoBehaviour
             }
             else
             {
-                // if (currentInput.Length == 0 && c == 'f' && !fIgnored)
-                // {
-                //     fIgnored = true;
-                //     continue;
-                // }
                 currentInput += c;
                 totalCharactersTyped++;
                 InputTextUI.text = currentInput;
@@ -216,7 +203,6 @@ public class SpellCasting : MonoBehaviour
     SpellVariant? DetermineSpellVariant(float timeTaken, int errorCount, int spellLength)
     {
         float errorRatio = (float)errorCount / spellLength;
-        // Debug.Log(errorRatio);
 
         if (errorRatio > 0.5f) return null;
         if (errorRatio == 0 && timeTaken < 3f) return SpellVariant.Perfect;

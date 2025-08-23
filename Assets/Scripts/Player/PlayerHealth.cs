@@ -6,9 +6,11 @@ public class PlayerHealth : MonoBehaviour
 {
     public float Health;
     public Scrollbar HealthScroll;
+    public GameManager gameManager;
     [SerializeField] private GameObject GameOverCanvas;
     [SerializeField] private GameObject HpBarCanvas;
     [SerializeField] private GameObject PointsCanvas;
+    
 
     public void TakeDamage(int damage)
     {
@@ -21,22 +23,13 @@ public class PlayerHealth : MonoBehaviour
 
             EndGame();
 
-
-            //             // If running in the editor
-            // #if UNITY_EDITOR
-            //             UnityEditor.EditorApplication.isPlaying = false;
-            // #else
-            //                                     // If running in a build
-            //                                     Application.Quit();
-            // #endif
-            //         }
-
         }
     }
 
     private void EndGame()
     {
         Time.timeScale = 0f;
+        gameManager.DisableTime();
         GameOverCanvas.SetActive(true);
         HpBarCanvas.SetActive(false);
         PointsCanvas.SetActive(false);

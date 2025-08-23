@@ -22,10 +22,13 @@ public class GameManager : MonoBehaviour
 
 
     [SerializeField] private GameObject PauseMenu;
+    [SerializeField] private GameObject InstructionsMenu;
     [SerializeField] private GameObject HpBarCanvas;
     [SerializeField] private GameObject PointsCanvas;
 
     private bool isPaused = false;
+
+    private bool canUnpause;
     private bool isTyping;
 
     private SpellCasting spellCastingScript;
@@ -41,23 +44,16 @@ public class GameManager : MonoBehaviour
 
             InitializeLists();
             DiscoverAction(SpellAction.Strike);
-            // DiscoverElement(SpellElement.Fire);
             SpellElement[] allElements = (SpellElement[])System.Enum.GetValues(typeof(SpellElement));
             SpellElement randomElement = allElements[Random.Range(0, allElements.Length)];
             DiscoverElement(randomElement);
 
-            //DELETE LATER
-            // DiscoverAction(SpellAction.Burst);
-            // DiscoverAction(SpellAction.Storm);
-            // DiscoverAction(SpellAction.Destruction);
-            // DiscoverElement(SpellElement.Ice);
-            // DiscoverElement(SpellElement.Lightning);
-            // DiscoverElement(SpellElement.Shadow);
         }
         else
         {
             Destroy(gameObject);
         }
+        canUnpause = true;
     }
 
     private void Update()
@@ -67,11 +63,11 @@ public class GameManager : MonoBehaviour
             isTyping = spellCastingScript.IsPlayerTyping();
             if (!isTyping)
             {
-                if (isPaused)
+                if (isPaused && canUnpause)
                 {
                     UnPauseGame();
                 }
-                else
+                else if (!isPaused && canUnpause)
                 {
                     PauseGame();
 
@@ -152,13 +148,14 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         PauseMenu.SetActive(false);
+        InstructionsMenu.SetActive(false);
         HpBarCanvas.SetActive(true);
         PointsCanvas.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         isPaused = false;
     }
-    
+
     public void QuitGame()
     {
         Debug.Log("Quit Game");
@@ -170,6 +167,15 @@ public class GameManager : MonoBehaviour
         // If running in a build
         Application.Quit();
 #endif
+    }
+
+    public void DisableTime()
+    {
+        canUnpause = false;
+    }
+    public void EnableTime()
+    {
+        canUnpause = true;
     }
 }
 
